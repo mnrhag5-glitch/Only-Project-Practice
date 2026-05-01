@@ -111,7 +111,7 @@ submit.addEventListener('click', (e) => { // click event using addEventListener
   e.preventDefault(); // page reload rokna
 
   let guess = +userInput.value; // input value ko number me convert
-  if (!guess || guess < 1 || guess > 50) return alert('Enter 1–50'); // validation
+  if (!guess || guess < 1 || guess > 50) return alert('Enter 1-50'); // validation
 
   prevGuess.push(guess); // guess array me add
   guessSlot.textContent = prevGuess.join(', '); // screen pe show

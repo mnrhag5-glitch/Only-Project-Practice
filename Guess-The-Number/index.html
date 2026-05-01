@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 200px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    body{
+        background-color: rgb(70, 94, 86);
+    }
+    .guessField{
+        padding: 10px;
+        font-size: 15px;
+        border-radius: 10px;
+        border: none;
+    }
+    .guessSubmit{
+        padding: 5px;
+        font-size: 15px;
+        border-radius: 10px;
+        border: none;
+        margin-top: 2px;
+    }
+
+</style>
+<body>
+    <div id="wrapper">
+        <h1>Guess The Number</h1>
+        <p>Guess a number between 1 and 100</p>
+        <input type="text"class="guessField" placeholder="Enter your guess">
+        <br/>
+        <button class="guessSubmit">Submit guess</button>
+        <div class="resultParas">
+            <p class="guesses"></p>
+            <p class="lastResult"></p>
+        </div>
+    </div>
+    
+    
+    <script src = "app.js"></script>
+</body>
+</html>

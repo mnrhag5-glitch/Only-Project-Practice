@@ -57,7 +57,78 @@
 //     console.log(item,index);
 // })
 
-let arr=[1,2,3,4,5,6];
-arr.forEach((i,index)=>{
-    console.log(i ,'=>',index);
-})
+// let arr=[1,2,3,4,5,6];
+// arr.forEach((i,index)=>{
+//     console.log(i ,'=>',index);
+// })
+
+
+
+
+// let arr =[1,2,3,4,5,6,7,8,9,10];
+// let result=arr.map((item,index)=>{
+// return item*2
+// })
+// console.log(result)
+
+// let arr =[1,2,3,4,5];
+//  arr.forEach((item,index)=>{
+//     console.log(item,'=>',index)
+// })
+
+
+// let arr=[1,2,3,4,5];
+// let result=arr.map((item,index)=>{
+//     return item*item*item;
+// });
+// console.log(result);
+
+
+// let arr = [10,22,30,33,40,55];
+// let newarr=arr.filter(function(item,index){
+//     if(item%10===0){
+//         return true
+//     }else{
+//         return false
+//     }
+// })
+// console.log(arr)
+// console.log(newarr)
+
+
+// let numbers=[2,4,5,7,8,2,1,9]
+// let double=numbers.map((item,index)=>{
+//     return item*2
+// })
+// let newval=double.filter((item,index)=>{
+// if(item>10){
+//     return true
+// }else{
+//     return false
+// }
+// })
+// console.log(numbers)
+// console.log(double)
+// console.log(newval);
+
+
+// let arr = [1, 2, 3, 4, 5, 6];
+
+// let result = arr.map(function (item) {
+//     return item * 2
+// }).filter(function (item) {
+//     return item > 10
+// });
+
+// console.log(result);
+
+
+
+// function processArray(arr) {
+//   return arr
+//     .map(num => num * 2)      // double each value
+//     .filter(num => num <= 10) // keep values ≤ 10
+// }
+
+// const processArray = arr => arr.map(n => n*2).filter(n => n<=10);
+// console.log(processArray([1, 3, 6, 8]));

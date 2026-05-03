@@ -140,6 +140,16 @@
 // return item%10===0})
 // console.log(out)
 
-[]
+const form = document.getElementById('myForm');
 
+form.addEventListener('submit', function(e){
+  e.preventDefault(); // page reload rokta hai
+  console.log("Form Submitted");
+});
+
+const input = document.getElementById('username');
+
+input.addEventListener('input', function(){
+  console.log("Typing:", input.value);
+});
 

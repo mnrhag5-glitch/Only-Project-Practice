@@ -134,8 +134,12 @@
 // console.log(processArray([1, 3, 6, 8]));
 
 
-let arr = [5,10,20,35,40,55,60];
-let out = arr.every(function(item,index){
-console.log("checking")
-return item%10===0})
-console.log(out)
+// let arr = [5,10,20,35,40,55,60];
+// let out = arr.every(function(item,index){
+// console.log("checking")
+// return item%10===0})
+// console.log(out)
+
+[]
+
+

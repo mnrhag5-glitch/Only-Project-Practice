@@ -162,3 +162,36 @@
 // });
 
 
+
+// let num = '';
+// let user = prompt('checking even or odd');
+// if(user%2==0){console.log('even');
+// }else{console.log("odd")}
+
+
+
+
+
+
+// const number = [1,2,3,4,5];
+//  const result=number.reduce((a,b)=>{
+//     return a+b
+// },10)
+// console.log(result);
+
+
+// const num = [1,2,3,4,5,6,7]
+// let result = num.filter((a,b)=>{
+//     if (num%2==0){
+//         console.log("even")
+//     }
+// })
+
+// console.log(result)
+
+
+
+let name = ["sam","mav","vohara"]
+let res = name.map(n => n.toUpperCase())
+
+console.log(res)

@@ -154,9 +154,11 @@
 // });
 
 
-const input = document.getElementById('name');
-const btn = document.getElementById('btn');
+// const input = document.getElementById('name');
+// const btn = document.getElementById('btn');
 
-btn.addEventListener('click', function(){
-  console.log(input.value);
-});
+// btn.addEventListener('click', function(){
+//   console.log(input.value);
+// });
+
+

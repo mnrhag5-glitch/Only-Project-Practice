@@ -180,18 +180,31 @@
 // console.log(result);
 
 
-// const num = [1,2,3,4,5,6,7]
-// let result = num.filter((a,b)=>{
-//     if (num%2==0){
-//         console.log("even")
-//     }
-// })
+// const num = [1,2,3,4,5,6,7];
 
-// console.log(result)
+// let result = num.filter((a) => {
+//     return a % 2 === 0;
+// });
 
+// console.log(result);
 
 
-let name = ["sam","mav","vohara"]
-let res = name.map(n => n.toUpperCase())
 
-console.log(res)
+function res(odd){
+return odd % 2 !== 0;
+}
+
+console.log([1,2,34,5,6,7,8,9,].filter(res));
+
+
+
+// let name = ["sam","mav","vohara"]
+// let res = name.map(n => n.toUpperCase())
+
+// console.log(res)
+
+// function isEven(num){
+//   return num % 2 === 0;
+// }
+
+// console.log([1,2,34,5,6,7,8,9].filter(isEven));

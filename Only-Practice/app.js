@@ -208,3 +208,82 @@
 // }
 
 // console.log([1,2,34,5,6,7,8,9].filter(isEven));
+
+
+
+//===========================================================
+//------------learning API------------------------
+//============================================================
+
+
+
+//--- to api ko example se smjhte hai ---
+// man lo ki hm coustomer hai jo waiter ko order deta hai --
+//or waitor kichan se khana leke ata hai---
+//ese hi ham frontend developer api ko order dete hai ki --
+//server se hmare liye data leke aooo------
+//api json format me hota hai kuch kuch objact ki trh hota hai----
+//api calll krne ke liyea fatch ki help li jati hai-----
+//examples----cricket score pta krna---
+//---weather ka pta krna-----
+
+
+// fetch("https://jsonplaceholder.typicode.com/users")
+//   .then(response => response.json())
+//   .then(data => console.log(data))
+
+//   async function getUsers(){
+//   let response = await fetch("https://jsonplaceholder.typicode.com/users");
+//   let data = await response.json();
+//   console.log(data);
+// }
+
+// getUsers();
+
+
+// async function getUsers(){
+//   let response = await fetch("https://jsonplaceholder.typicode.com/users");
+//   let data = await response.json();
+
+//   data.forEach(user => {
+//     console.log(user.address);
+//   });
+// }
+
+// getUsers();
+
+
+// fetch("https://jsonplaceholder.typicode.com/users")
+// .then(Response=>Response.json())
+// .then(data=>console.log(data));
+
+
+// async function hello(){
+//     let response = await fetch("https://jsonplaceholder.typicode.com/users");
+//     let data = await response.json();
+//     console.log(data);
+// }
+// hello();
+
+
+
+// async function hello (){
+//     let resonse = await fetch("https://jsonplaceholder.typicode.com/users")
+//     let data = await resonse.json()
+//     console.log(data);
+    
+// }
+// hello()
+
+
+
+// fetch("https://jsonplaceholder.typicode.com/users")
+// .then(response=>response.json())
+// .then(data=>console.log(data))
+
+async function hello(){
+    let response = await fetch("https://jsonplaceholder.typicode.com/users");
+    let data = await response.json();
+    console.log(data)
+}
+hello();

@@ -455,23 +455,45 @@
 
 
 
-async function hello(){
-    let res = await fetch("https://jsonplaceholder.typicode.com/users")
-    let data = await res.json()
+// async function hello(){
+//     let res = await fetch("https://jsonplaceholder.typicode.com/users")
+//     let data = await res.json()
 //    let email = data.map((a)=>a.email)  
 //you can do it in console too
 // console.log(data.map((a)=>a.email));
 
-let email = data;
-email.forEach((a)=>{
-if(a.email.endsWith("biz")){
-    console.log(a.email);
+// let email = data;
+// email.forEach((a)=>{
+// if(a.email.endsWith("biz")){
+//     console.log(a.email);
     
-}
+// }
 
-})
+// })
 
 
-}
+// }
 
-hello();
+// hello();
+
+
+// async function hello(){
+//     let res = await fetch("https://jsonplaceholder.typicode.com/users");
+//     let data = await res.json();
+
+//     let emails = data
+//         .filter(a => a.email.endsWith(".biz"))
+//         .map(a => a.email);
+
+//     console.log(emails);
+// }
+
+// hello();
+
+
+// async function hello(){
+//     let res = await fetch("https://jsonplaceholder.typicode.com/users");
+//     let data = await res.json();
+//     console.log(data.length);   
+// }
+// hello();

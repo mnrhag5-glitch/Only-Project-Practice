@@ -232,6 +232,16 @@
 //   .then(response => response.json())
 //   .then(data => console.log(data))
 
+
+//--------------then ka use hai ki jab kaam complete ho jaye tab ye karo-------------
+//---fetch server se data mangta hai or time lgta hai to "then"---
+//---wait krta hai jab tak data na aa jaye---
+//---phir next kaam krta hai----
+//--simple  word me then future me milne wale result ko handle krta hai---
+
+
+
+
 //   async function getUsers(){
 //   let response = await fetch("https://jsonplaceholder.typicode.com/users");
 //   let data = await response.json();
@@ -240,6 +250,7 @@
 
 // getUsers();
 
+//-------async await .then ka easy version hai-------
 
 // async function getUsers(){
 //   let response = await fetch("https://jsonplaceholder.typicode.com/users");
@@ -281,9 +292,53 @@
 // .then(response=>response.json())
 // .then(data=>console.log(data))
 
+// async function hello(){
+//     let response = await fetch("https://jsonplaceholder.typicode.com/users");
+//     let data = await response.json();
+//     console.log(data)
+// }
+// hello();
+
+// async function hello (){
+//     let res = await fetch("https://jsonplaceholder.typicode.com/users");
+//     let data = await res.json();
+//     console.log(data);
+//     data.forEach((a)=>{
+//     console.log(a.e)
+//     })
+// }
+// hello();
+
+
+// fetch("https://jsonplaceholder.typicode.com/users")
+// .then(res=>res.json())
+// .then(data=>
+
+// data.forEach((a)=>{
+// console.log(a.username)
+// }))
+
+// let userInfo="";
+// fetch ("https://jsonplaceholder.typicode.com/users")
+// .then(res=>res.json())
+// .then(data=>
+//     {userInfo = data
+//         console.log(userInfo);
+        
+//     })
+
+let userInfo="";
 async function hello(){
-    let response = await fetch("https://jsonplaceholder.typicode.com/users");
-    let data = await response.json();
-    console.log(data)
+    let res = await fetch("https://jsonplaceholder.typicode.com/users");
+    let data = await res.json()
+   userInfo = data;
+//    console.log(userInfo);
+   userInfo.forEach((a)=>{
+    console.log(a.username , a.email)
+   })
+   
+
 }
+
 hello();
+

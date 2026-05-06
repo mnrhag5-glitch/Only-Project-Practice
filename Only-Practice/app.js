@@ -327,18 +327,99 @@
         
 //     })
 
-let userInfo="";
-async function hello(){
-    let res = await fetch("https://jsonplaceholder.typicode.com/users");
-    let data = await res.json()
-   userInfo = data;
-//    console.log(userInfo);
-   userInfo.forEach((a)=>{
-    console.log(a.username , a.email)
-   })
+// let userInfo="";
+// async function hello(){
+//     let res = await fetch("https://jsonplaceholder.typicode.com/users");
+//     let data = await res.json()
+//    userInfo = data;
+// //    console.log(userInfo);
+//    userInfo.forEach((a)=>{
+//     console.log(a.username , a.email)
+//    })
    
 
+// }
+
+// hello();
+
+
+//-=============================================
+//==============================================
+//============REVESION CODE======================
+//--===============================================
+//================================================
+
+
+// fetch("https://jsonplaceholder.typicode.com/users")
+// .then(res=>res.json())
+// .then(data=>console.log(data)
+// )
+
+
+
+// let userInfo = "";
+// fetch("https://jsonplaceholder.typicode.com/users")
+// .then(res=>res.json())
+// .then(data=>
+//   {userInfo = data;
+//   console.log(userInfo)
+//   userInfo.forEach((a)=>{
+//     console.log(a.username,a.email)
+//   }) })
+
+
+
+
+// async function hello (){
+//     let res = await fetch("https://jsonplaceholder.typicode.com/users")
+//     let data = await res.json();
+//     console.log(data)
+// }  
+// hello();
+
+
+
+// let user = "";
+// async function hello (){
+//     let res = await fetch("https://jsonplaceholder.typicode.com/users")
+//     let data = await res.json();
+
+//     user = data;
+//     console.log(user)
+//     user.forEach((a)=>{
+//   console.log(a.address )
+//     })
+ 
+// }  
+// hello();
+
+
+
+
+/////==============TEST=====================
+//===========================================
+//=============================================
+
+
+// API SE USER FETCH KRO OR SB USER KE NAAM PRINT KRO=========
+
+// fetch("https://jsonplaceholder.typicode.com/users")
+// .then(res => res.json())
+// .then(data =>console.log(data)
+
+
+// )
+
+let user = ""
+async function hello (){
+    let res = await fetch("https://jsonplaceholder.typicode.com/users")
+    let data = await res.json()
+    user = data
+  user.forEach((a)=>{
+if(a.username.endsWith("e")){
+    console.log(a.username);   
 }
+  })   
+}   
 
-hello();
-
+hello()

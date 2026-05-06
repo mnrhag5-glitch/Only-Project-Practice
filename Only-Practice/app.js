@@ -410,16 +410,68 @@
 
 // )
 
-let user = ""
-async function hello (){
+
+//====jinke naam a se start hote unh eprint kro====(startsWith)
+//====jinke naam e se end hote unhe print kro=====(endsWith)
+//====jinke naame me koi words include hai use print kro===(includes)
+
+// let user = ""
+// async function hello (){
+//     let res = await fetch("https://jsonplaceholder.typicode.com/users")
+//     let data = await res.json()
+//     user = data
+//   user.forEach((a)=>{
+// if(a.username.endsWith("e")){
+//     console.log(a.username);   
+// }
+//   })   
+// }   
+
+// hello()
+
+
+
+//===make a new arrey with only emails===========
+
+// fetch("https://jsonplaceholder.typicode.com/users")
+// .then(res => res.json())
+// .then(data =>
+
+//    { let onlyEmail = data
+
+// // console.log(onlyEmail);
+// let emails = onlyEmail.map((a)=>{
+// return a.email
+
+
+// })
+// console.log(emails);
+
+
+
+//    }
+// )
+
+
+
+
+async function hello(){
     let res = await fetch("https://jsonplaceholder.typicode.com/users")
     let data = await res.json()
-    user = data
-  user.forEach((a)=>{
-if(a.username.endsWith("e")){
-    console.log(a.username);   
-}
-  })   
-}   
+//    let email = data.map((a)=>a.email)  
+//you can do it in console too
+// console.log(data.map((a)=>a.email));
 
-hello()
+let email = data;
+email.forEach((a)=>{
+if(a.email.endsWith("biz")){
+    console.log(a.email);
+    
+}
+
+})
+
+
+}
+
+hello();

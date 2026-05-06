@@ -190,11 +190,11 @@
 
 
 
-function res(odd){
-return odd % 2 !== 0;
-}
+// function res(odd){
+// return odd % 2 !== 0;
+// }
 
-console.log([1,2,34,5,6,7,8,9,].filter(res));
+// console.log([1,2,34,5,6,7,8,9,].filter(res));
 
 
 

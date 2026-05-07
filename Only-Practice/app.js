@@ -822,32 +822,65 @@
 // console.log("here error")})
 
 
-let pro = new Promise((res, rej)=>{
 
-    let food = false;
+// let pro = new Promise((res, rej)=>{
 
-    if(food){
-        res("food is ready");
-    }else{
-        rej("food is NOT ready");
-    }
+//     let food = false;
 
-});
+//     if(food){
+//         res("food is ready");
+//     }else{
+//         rej("food is NOT ready");
+//     }
+
+// });
+
+// async function hello(){
+
+//     try{
+
+//         let data = await pro;
+
+//         console.log(data);
+
+//     }catch(error){
+
+//         console.log(error);
+
+//     }
+
+// }
+
+// hello();
+
+
+
+// let promise = new Promise((res,rej)=>{
+//       let battery = true;
+//       if(battery){
+//      res("phone on");
+        
+//       }else{
+//         rej("charge kro")
+//       }
+// })
+// promise
+// .then((p)=>{
+//     console.log(p)
+// }).catch((error)=>{
+// console.log("error")
+// })
+
+
 
 async function hello(){
-
-    try{
-
-        let data = await pro;
-
-        console.log(data);
-
-    }catch(error){
-
-        console.log(error);
-
-    }
-
+    let res = await fetch("https://jsonplaceholder.typicode.com/users");
+    let data = await res.json();
+    // console.log(data);
+    
+    data.forEach((a)=>{
+       if( a.username.includes("e"))
+        console.log(a.username)
+    })
 }
-
-hello();
+hello()

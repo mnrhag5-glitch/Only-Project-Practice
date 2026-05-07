@@ -684,3 +684,102 @@
 // {console.log("error aya hai");}
 
 
+
+//==============PRECTICE QUESTION=====================
+//====================================================
+//=======================================================
+//=================================================
+//=================================================
+
+
+// console.log("A");
+
+// setTimeout(() => {
+//     console.log("B");
+// }, 0);
+
+// console.log("C");      //OUTPUT IS => A C B
+
+
+
+// let p = new Promise((res, rej)=>{
+
+//     let internet = true;
+
+//     if(internet){
+//         res("Connected");
+//     }else{
+//         rej("Disconnected");
+//     }
+
+// });
+
+// p.then((msg)=>{
+//     console.log(msg);
+// });
+
+//=============OUTPUT =>  CONNECTED
+
+// try{
+//     console.log(age);
+// }
+// catch(error){
+//     console.log("Error handle ho gaya");
+// }
+
+//=======OUTPUT => ERROR HENDLE HO GYA
+
+
+
+async function hello(){
+
+    let res = await fetch("https://jsonplaceholder.typicode.com/users");
+
+    let data = await res.json();
+    console.log(data)
+
+   let result = data.filter((a)=>{
+    if(a.username.length>8){
+        console.log(a.username);
+        
+    }
+   })
+}
+
+hello();
+
+
+//===============one more way===============
+
+async function hello(){
+
+    let res = await fetch("https://jsonplaceholder.typicode.com/users");
+
+    let data = await res.json();
+    console.log(data)
+
+let result = data.filter((a)=>{
+    return a.username.length>8;
+})
+console.log(result)
+}
+hello();
+
+
+//===================one mmore way==============
+
+
+async function hello(){
+
+    let res = await fetch("https://jsonplaceholder.typicode.com/users");
+
+    let data = await res.json();
+
+    let result = data
+        .filter(a => a.username.length > 8)
+        .map(a => a.username);
+
+    console.log(result);
+}
+
+hello();

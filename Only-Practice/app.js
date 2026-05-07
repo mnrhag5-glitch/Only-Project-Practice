@@ -731,55 +731,75 @@
 
 
 
-async function hello(){
+// async function hello(){
 
-    let res = await fetch("https://jsonplaceholder.typicode.com/users");
+//     let res = await fetch("https://jsonplaceholder.typicode.com/users");
 
-    let data = await res.json();
-    console.log(data)
+//     let data = await res.json();
+//     console.log(data)
 
-   let result = data.filter((a)=>{
-    if(a.username.length>8){
-        console.log(a.username);
+//    let result = data.filter((a)=>{
+//     if(a.username.length>8){
+//         console.log(a.username);
         
-    }
-   })
-}
+//     }
+//    })
+// }
 
-hello();
+// hello();
 
 
 //===============one more way===============
 
-async function hello(){
+// async function hello(){
 
-    let res = await fetch("https://jsonplaceholder.typicode.com/users");
+//     let res = await fetch("https://jsonplaceholder.typicode.com/users");
 
-    let data = await res.json();
-    console.log(data)
+//     let data = await res.json();
+//     console.log(data)
 
-let result = data.filter((a)=>{
-    return a.username.length>8;
-})
-console.log(result)
-}
-hello();
+// let result = data.filter((a)=>{
+//     return a.username.length>8;
+// })
+// console.log(result)
+// }
+// hello();
 
 
 //===================one mmore way==============
 
 
-async function hello(){
+// async function hello(){
 
-    let res = await fetch("https://jsonplaceholder.typicode.com/users");
+//     let res = await fetch("https://jsonplaceholder.typicode.com/users");
 
-    let data = await res.json();
+//     let data = await res.json();
 
-    let result = data
-        .filter(a => a.username.length > 8)
-        .map(a => a.username);
+//     let result = data
+//         .filter(a => a.username.length > 8)
+//         .map(a => a.username);
 
-    console.log(result);
+//     console.log(result);
+// }
+
+// hello();
+
+
+
+function count(){
+    let num = 0;
+    return function(){
+        num++;
+        console.log(num);
+        
+        
+    }
 }
-
-hello();
+let number = count()
+number()
+number()
+number()
+number()
+number()
+number()
+number()

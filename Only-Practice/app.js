@@ -786,20 +786,68 @@
 
 
 
-function count(){
-    let num = 0;
-    return function(){
-        num++;
-        console.log(num);
+// function count(){
+//     let num = 0;
+//     return function(){
+//         num++;
+//         console.log(num);
         
         
+//     }
+// }
+// let number = count()
+// number()
+// number()
+// number()
+// number()
+// number()
+// number()
+// number()
+
+
+// let pro = new Promise((res,rej)=>{
+//     let food =true;
+//     if(food){
+//         res("food is ready")
+//     }else{
+//         rej("food is Not ready")
+//     }
+// } )
+// pro
+// .then((a)=>{
+   
+//     console.log(a);
+    
+// }).catch((error)=>{
+// console.log("here error")})
+
+
+let pro = new Promise((res, rej)=>{
+
+    let food = false;
+
+    if(food){
+        res("food is ready");
+    }else{
+        rej("food is NOT ready");
     }
+
+});
+
+async function hello(){
+
+    try{
+
+        let data = await pro;
+
+        console.log(data);
+
+    }catch(error){
+
+        console.log(error);
+
+    }
+
 }
-let number = count()
-number()
-number()
-number()
-number()
-number()
-number()
-number()
+
+hello();

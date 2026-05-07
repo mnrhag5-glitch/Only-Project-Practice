@@ -606,21 +606,50 @@
 // }
 
 
-async function hello(){
+// async function hello(){
 
-    try{
-        let res = await fetch("https://jsonplaceholder.typicode.com/users");
+//     try{
+//         let res = await fetch("https://jsonplaceholder.typicode.com/users");
 
-        let data = await res.json();
+//         let data = await res.json();
 
-        console.log(data);
+//         console.log(data);
 
-    }catch(error){
+//     }catch(error){
 
-        console.log("Error aagya");
+//         console.log("Error aagya");
 
-    }
+//     }
 
-}
+// }
 
-hello();
+// hello();
+
+
+
+// let promise = new Promise ((res,rej)=>{
+
+//     let internet = true;
+//     if(internet){
+//         res("youtube dekh skte ho")
+//     }else{
+//         rej("nhi dekh skte ja hotspot le")
+//     }
+
+// })
+// console.log(promise);
+
+// promise.then((msg)=>{
+//     console.log(msg)
+// })
+// .catch((error)=>{
+//     console.log("error")
+// })
+
+let p = new Promise((res, rej)=>{
+    rej("Error");
+});
+
+p.catch((a)=>{
+    console.log(a);
+});

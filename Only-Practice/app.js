@@ -497,3 +497,46 @@
 //     console.log(data.length);   
 // }
 // hello();
+
+//=========enough for today kal iska revision hoga or again test==============
+
+
+
+// fetch ("https://jsonplaceholder.typicode.com/users")
+// .then(res=>res.json())
+// .then(data=>
+//     data.forEach((a)=>{
+//         console.log(a.email);
+        
+//     })
+// )
+
+
+
+// async function hello(){
+//     let res = await fetch("https://jsonplaceholder.typicode.com/users")
+//     let data = await res.json()
+//     // console.log(data);
+     
+// data.forEach((a)=>{
+//    if(a.username.startsWith("K")){
+//     console.log(a.username)
+//    }
+// })
+
+
+// }
+// hello()
+
+
+
+fetch ("https://jsonplaceholder.typicode.com/users")
+.then(res=>res.json())
+.then(data=>
+  {let emails=data.map((a)=>{
+    return a.email
+  })
+console.log(emails);
+
+}
+)

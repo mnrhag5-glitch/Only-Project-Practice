@@ -530,13 +530,97 @@
 
 
 
-fetch ("https://jsonplaceholder.typicode.com/users")
-.then(res=>res.json())
-.then(data=>
-  {let emails=data.map((a)=>{
-    return a.email
-  })
-console.log(emails);
+// fetch ("https://jsonplaceholder.typicode.com/users")
+// .then(res=>res.json())
+// .then(data=>
+//   {let emails=data.map((a)=>{
+//     return a.email
+//   })
+// console.log(emails);
+
+// }
+// )
+
+
+
+
+
+//======to resvison ho gya==========
+//======today topic is synchor asyncho promis try catch-====================
+//======================================================
+//=================================================
+//=================================================
+//=================================================
+//=================================================
+
+
+
+//===synchorous============>>>>>>>>>>
+
+//SYNCHRNOUS ka matlb hai ki line by line kaam krna
+//or ASYNCHRONOUS  ka matlb hai ki background me bhi kaam chlta rehga
+
+
+// console.log("5");
+// setTimeout(()=>{
+//     console.log("8")
+// },2000)
+
+//====this is asynchrounous
+// console.log("7899")
+// console.log("7899")
+// console.log("7899")
+
+
+//=====Promise===============
+
+//ye 3 state me hota hai====
+// pending   resolved   rejected
+
+// let promise = new Promise((resolve, reject) => {
+//     let done = true;
+
+//     if(done){
+//         resolve("Kaam ho gaya");
+//     }else{
+//         reject("Error aagya");
+//     }
+// });
+
+// console.log(promise);
+
+// try{
+//     console.log(a);
+// }
+// catch(error){
+//     console.log("Error aagya");
+// }
+
+
+
+// try{
+//     console.log(a); 
+// }
+// catch(error){
+//     console.log("arror aaya")
+// }
+
+
+async function hello(){
+
+    try{
+        let res = await fetch("https://jsonplaceholder.typicode.com/users");
+
+        let data = await res.json();
+
+        console.log(data);
+
+    }catch(error){
+
+        console.log("Error aagya");
+
+    }
 
 }
-)
+
+hello();

@@ -646,10 +646,41 @@
 //     console.log("error")
 // })
 
-let p = new Promise((res, rej)=>{
-    rej("Error");
-});
+// let p = new Promise((res, rej)=>{
+//     rej("Error");
+// });
 
-p.catch((a)=>{
-    console.log(a);
-});
+// p.catch((a)=>{
+//     console.log(a);
+// });
+
+
+// let promise = new Promise((res,rej)=>{
+// let food = true;
+// if(food){
+//     res("food is ready")
+// }else{
+//     rej("it takes time")
+// }
+// })
+// console.log(promise);
+
+
+
+// let pro = new Promise((res,rej)=>{
+//    let skills = true;
+//    if(skills){
+//     res("you got the job")
+//    }else{
+//     rej("first learn skills")
+//    }
+
+// })
+// try{
+//     console.log(pro)
+// }
+
+//     catch(error)
+// {console.log("error aya hai");}
+
+

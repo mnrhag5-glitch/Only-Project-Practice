@@ -873,14 +873,364 @@
 
 
 
-async function hello(){
-    let res = await fetch("https://jsonplaceholder.typicode.com/users");
-    let data = await res.json();
-    // console.log(data);
+// async function hello(){
+//     let res = await fetch("https://jsonplaceholder.typicode.com/users");
+//     let data = await res.json();
+//     // console.log(data);
     
-    data.forEach((a)=>{
-       if( a.username.includes("e"))
-        console.log(a.username)
-    })
-}
-hello()
+//     data.forEach((a)=>{
+//        if( a.username.includes("e"))
+//         console.log(a.username)
+//     })
+// }
+// hello()
+
+
+
+
+
+
+
+/////===========7/5/26==============================
+//================================================
+//================================================
+//================================================
+//================================================
+//===========FOR REVISION=====================
+
+
+/* =========================
+   SYNCHRONOUS
+========================= */
+
+// console.log("1");
+// console.log("2");
+// console.log("3");
+
+
+/* =========================
+   ASYNCHRONOUS
+========================= */
+
+// console.log("A");
+
+// setTimeout(() => {
+//     console.log("B");
+// }, 2000);
+
+// console.log("C");
+
+
+/* =========================
+   PROMISE BASIC
+========================= */
+
+// let promise = new Promise((resolve, reject) => {
+
+//     let internet = true;
+
+//     if(internet){
+//         resolve("Connected");
+//     }else{
+//         reject("Disconnected");
+//     }
+
+// });
+
+// console.log(promise);
+
+
+/* =========================
+   THEN & CATCH
+========================= */
+
+// let pro = new Promise((res, rej) => {
+
+//     let food = false;
+
+//     if(food){
+//         res("Food is ready");
+//     }else{
+//         rej("Food is NOT ready");
+//     }
+
+// });
+
+// pro
+// .then((msg)=>{
+//     console.log(msg);
+// })
+// .catch((error)=>{
+//     console.log(error);
+// });
+
+
+/* =========================
+   ASYNC / AWAIT
+========================= */
+
+// async function hello(){
+
+//     let res = await fetch("https://jsonplaceholder.typicode.com/users");
+
+//     let data = await res.json();
+
+//     console.log(data);
+// }
+
+// hello();
+
+
+/* =========================
+   TRY CATCH
+========================= */
+
+// try{
+//     console.log(age);
+// }
+// catch(error){
+//     console.log("Error handled");
+// }
+
+
+/* =========================
+   ASYNC + TRY CATCH
+========================= */
+
+// let foodPromise = new Promise((res, rej)=>{
+
+//     let food = false;
+
+//     if(food){
+//         res("Food is ready");
+//     }else{
+//         rej("Food is NOT ready");
+//     }
+
+// });
+
+// async function checkFood(){
+
+//     try{
+
+//         let data = await foodPromise;
+
+//         console.log(data);
+
+//     }catch(error){
+
+//         console.log(error);
+
+//     }
+
+// }
+
+// checkFood();
+
+
+/* =========================
+   FOREACH
+========================= */
+
+// let nums = [1,2,3,4];
+
+// nums.forEach((a)=>{
+//     console.log(a);
+// });
+
+
+/* =========================
+   FILTER
+========================= */
+
+// let number = [1,2,3,4,5,6];
+
+// let even = number.filter((a)=>{
+//     return a % 2 === 0;
+// });
+
+// console.log(even);
+
+
+/* =========================
+   MAP
+========================= */
+
+// let arr = [1,2,3];
+
+// let square = arr.map((a)=>{
+//     return a * a;
+// });
+
+// console.log(square);
+
+
+/* =========================
+   STRING METHODS
+========================= */
+
+// let name = "Gautam";
+
+// console.log(name.startsWith("G"));
+// console.log(name.endsWith("m"));
+// console.log(name.includes("ta"));
+
+
+/* =========================
+   API - PRINT USERNAMES
+========================= */
+
+// async function users(){
+
+//     let res = await fetch("https://jsonplaceholder.typicode.com/users");
+
+//     let data = await res.json();
+
+//     data.forEach((a)=>{
+//         console.log(a.username);
+//     });
+
+// }
+
+// users();
+
+
+/* =========================
+   API - EMAILS USING MAP
+========================= */
+
+// async function emails(){
+
+//     let res = await fetch("https://jsonplaceholder.typicode.com/users");
+
+//     let data = await res.json();
+
+//     let email = data.map((a)=>{
+//         return a.email;
+//     });
+
+//     console.log(email);
+
+// }
+
+// emails();
+
+
+/* =========================
+   API - FILTER .biz EMAILS
+========================= */
+
+// async function bizEmails(){
+
+//     let res = await fetch("https://jsonplaceholder.typicode.com/users");
+
+//     let data = await res.json();
+
+//     let result = data
+//     .filter((a)=>{
+//         return a.email.endsWith(".biz");
+//     })
+//     .map((a)=>{
+//         return a.email;
+//     });
+
+//     console.log(result);
+
+// }
+
+// bizEmails();
+
+
+/* =========================
+   API - USERNAME LENGTH
+========================= */
+
+// async function longUsername(){
+
+//     let res = await fetch("https://jsonplaceholder.typicode.com/users");
+
+//     let data = await res.json();
+
+//     data.forEach((a)=>{
+
+//         if(a.username.length > 8){
+//             console.log(a.username);
+//         }
+
+//     });
+
+// }
+
+// longUsername();
+
+
+/* =========================
+   API - USERNAME INCLUDES e
+========================= */
+
+// async function includesE(){
+
+//     let res = await fetch("https://jsonplaceholder.typicode.com/users");
+
+//     let data = await res.json();
+
+//     data.forEach((a)=>{
+
+//         if(a.username.includes("e")){
+//             console.log(a.username);
+//         }
+
+//     });
+
+// }
+
+// includesE();
+
+
+/* =========================
+   CLOSURE
+========================= */
+
+// function outer(){
+
+//     let name = "Gautam";
+
+//     function inner(){
+//         console.log(name);
+//     }
+
+//     return inner;
+// }
+
+// let result = outer();
+
+// result();
+
+
+/* =========================
+   COUNTER CLOSURE
+========================= */
+
+// function counter(){
+
+//     let count = 0;
+
+//     return function(){
+
+//         count++;
+
+//         console.log(count);
+
+//     }
+// }
+
+// let increase = counter();
+
+// increase();
+// increase();
+// increase();
+
+//=====OK HELLO AJ ME STUDY NHI KR PAUGA KYUKI MERE ANT KI DEATH HUI HAI IS 
+//CHAKKAR ME MENE AJ CLASS BHI ATTEND NHI KI HAI
+
+console.log("today was bad and busy day so study start's from tomorrow");

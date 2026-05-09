@@ -1233,4 +1233,20 @@
 //=====OK HELLO AJ ME STUDY NHI KR PAUGA KYUKI MERE ANT KI DEATH HUI HAI IS 
 //CHAKKAR ME MENE AJ CLASS BHI ATTEND NHI KI HAI
 
-console.log("today was bad and busy day so study start's from tomorrow");
+// console.log("today was bad and busy day so study start's from tomorrow");
+
+
+
+function person(naam , umar , jagah){
+     this.name = naam;
+     this.age = umar;
+     this.from = jagah;
+}
+let p1 =new  person("ram",21,"himachal")
+let p2 =new  person("sita",20,"himachal")
+console.log(p1);
+console.log(p2);
+
+
+
+

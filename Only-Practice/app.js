@@ -1237,16 +1237,43 @@
 
 
 
-function person(naam , umar , jagah){
-     this.name = naam;
-     this.age = umar;
-     this.from = jagah;
-}
-let p1 =new  person("ram",21,"himachal")
-let p2 =new  person("sita",20,"himachal")
-console.log(p1);
-console.log(p2);
+// function person(naam , umar , jagah){
+//      this.name = naam;
+//      this.age = umar;
+//      this.from = jagah;
+// }
+// let p1 =new  person("ram",21,"himachal")
+// let p2 =new  person("sita",20,"himachal")
+// console.log(p1);
+// console.log(p2);
 
 
 
+// class hello{
+//    constructor(naam,umar,jagah){
+//       this.name = naam;
+//       this.age = umar;
+//       this.from = jagah
+//    }
+// }
+// let p1 =new hello("gautam",21,"delhi")
+// let p2 = new hello("seju",21,"himachal")
+// console.log(p1);
+// console.log(p2);
 
+
+// class hy{
+//    constructor(){
+
+//    }
+//    yooo(){
+//       console.log("hy this is a function name")
+//    }
+// }
+// let hy1=new hy
+// console.log(hy1)
+
+
+
+const cube = (n)=>n*n*n;
+console.log(cube(3));

@@ -1275,5 +1275,18 @@
 
 
 
-const cube = (n)=>n*n*n;
-console.log(cube(3));
+// const cube = (n)=>n*n*n;
+// console.log(cube(3));
+
+
+let id = setInterval(()=>{
+   console.log("Hi");
+   
+},2000)
+
+setInterval(()=>{
+   clearInterval(id)
+},30000)
+
+
+

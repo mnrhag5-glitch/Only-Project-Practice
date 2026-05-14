@@ -1628,19 +1628,19 @@ console.log("start the test");
 //-------------------------------question 17--------------------------
 
 
-// let object1 = {
-//    car = "BMW",
-//    speed = 150,
-//    price = 500000
-// }
+let object1 = {
+   car :"BMW",
+   speed : 150,
+   price : 500000
+}
 
-// let object2 = {
-//    car = "TATA",
-//    speed = 120,
-//    price = 400000
-// }
-// console.log(object1)
-// console.log(object)
+let object2 = {
+   car : "TATA",
+   speed : 120,
+   price : 400000
+}
+console.log(object1)
+console.log(object2)
 
 
 //-------------------------question 18-------------------------------
@@ -1676,18 +1676,18 @@ console.log("start the test");
 //----------------------question 21--------------------------------
 
 
-class Animall
-{ constructor(name,sound){
-   this.name = name;
-   this.sound = sound;
-}
+// class Animall
+// { constructor(name,sound){
+//    this.name = name;
+//    this.sound = sound;
+// }
 
-makeSound(){
-   console.log(this.name,"says",this.sound)
-}
-}
-let dogg = new Animall("dog","bark");
+// makeSound(){
+//    console.log(this.name,"says",this.sound)
+// }
+// }
+// let dogg = new Animall("dog","bark");
 
 
 
-dogg.makeSound()
+// dogg.makeSound()

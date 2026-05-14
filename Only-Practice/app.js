@@ -1587,13 +1587,107 @@ console.log("start the test");
 
 
 
-async function helloo(){
-   let res = await fetch("https://jsonplaceholder.typicode.com/users");
-   let data = await res.json();
+// async function helloo(){
+//    let res = await fetch("https://jsonplaceholder.typicode.com/users");
+//    let data = await res.json();
 
-   data.forEach((user)=>{
+//    data.forEach((user)=>{
       
-   console.log(user.username)
-   })
+//    console.log(user.username)
+//    })
+// }
+// helloo()
+
+
+//------------------------------question 15------------------------------
+
+
+
+
+
+
+
+
+
+//------------------------------question 16------------------------------
+
+
+// class Car {
+//    constructor(brand,price){
+//       this.brand = brand;
+//       this.price = price
+//    }
+
+// }
+// let car1 = new Car("BMW",5000000)
+// let car2 = new Car("Royal-Roles",60000000);
+
+// console.log(car1)
+
+
+//-------------------------------question 17--------------------------
+
+
+// let object1 = {
+//    car = "BMW",
+//    speed = 150,
+//    price = 500000
+// }
+
+// let object2 = {
+//    car = "TATA",
+//    speed = 120,
+//    price = 400000
+// }
+// console.log(object1)
+// console.log(object)
+
+
+//-------------------------question 18-------------------------------
+
+
+// class Carr {
+//    constructor(brand,price){
+//       this.brand = brand;
+//       this.price = price
+//    }
+
+//    showPrice(){
+//       console.log("car price is",this.price)
+//    }
+
+// }
+// let car3 = new Carr("BMW",5000000)
+// let car4 = new Carr("Royal-Roles",60000000);
+
+// car3.showPrice()
+
+
+//------------------------------question 20-------------------------
+
+// function Animal(name,sound){
+//    this.name = name;
+//    this.sound = sound;
+// }
+// let dog = new Animal("dog","bark");
+
+// console.log(dog)
+
+//----------------------question 21--------------------------------
+
+
+class Animall
+{ constructor(name,sound){
+   this.name = name;
+   this.sound = sound;
 }
-helloo()
+
+makeSound(){
+   console.log(this.name,"says",this.sound)
+}
+}
+let dogg = new Animall("dog","bark");
+
+
+
+dogg.makeSound()

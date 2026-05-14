@@ -1445,3 +1445,155 @@
 
 
 console.log("start the test");
+
+
+
+//--------question 1-------------------------------------
+
+// let h1 = document.createElement("h1");
+// h1.innerText = "Hello Gautam";
+// document.body.appendChild(h1)
+
+
+//-----------question 2-------------------------------------
+
+
+// let btn = document.createElement("button");
+// btn.innerText = "click";
+// document.body.appendChild(btn)
+// btn.addEventListener("click",()=>{
+//    document.body.style.backgroundColor = "red"
+// })
+
+
+//----------------question 3----------------------------------
+
+
+// let p = document.createElement("p");
+// p.innerText = "this is paraghraph";
+// let btn2 = document.createElement("button");
+// btn2.innerText = "click";
+// document.body.appendChild(p);
+// document.body.appendChild(btn2)
+
+// btn2.addEventListener("click",()=>{
+//    p.remove();
+// })
+
+
+//-------------------question 4-------------------------
+
+// let box = document.querySelector(".class");
+// box.style.color = "blue"
+
+
+//-----------------------question 5----------------------------------
+
+
+// let li = document.querySelectorAll(".li");
+// li.forEach((event)=>{
+//    event.style.color = "green"
+// })
+
+
+//----------------------question 6-------------------------------
+
+
+// let title = document.querySelector("#title");
+// title.style.fontSize = "50px"
+
+
+//----------------------------question 7-----------------------------
+
+// let h2 = document.createElement("h2");
+// h2.innerText = "This is h1 but i write it h2";
+// document.body.appendChild(h2) 
+
+
+//-------------------------question 8---------------------------------
+
+// let h4 = document.createElement("h4");
+// let p2 = document.createElement("p2");
+// h4.innerText = "Hello";
+// p2.innerText = "Gautam";
+// document.body.appendChild(h4) 
+// document.body.appendChild(p2) 
+
+
+//-------------------------------question 9 -------------------------------
+
+// let h5 = document.createElement("h5");
+// h5.innerText = "h5 text change";
+// document.body.appendChild(h5) 
+
+// let btn3 = document.createElement("button");
+// btn3.innerText = "text change"
+// document.body.appendChild(btn3)
+
+// btn3.addEventListener("click",()=>{
+//    h5.innerText = "Welcome"
+// })
+
+
+//----------------------question 10-------------------------------
+
+// let btn4 = document.createElement("button");
+// btn4.innerText = "click here"
+// document.body.appendChild(btn4)
+
+
+// btn4.addEventListener("click",()=>{
+//    console.log("Hello")
+// })
+
+
+//-------------------------question 11-------------------------------
+
+
+// let input = document.createElement("input");
+// let btn5 = document.createElement("button");
+// btn5.innerText = "click in btn5"
+// document.body.appendChild(input)
+// document.body.appendChild(btn5)
+
+// btn5.addEventListener("click",()=>{
+//    console.log(input.value)
+// })
+
+
+
+//-------------------------------question 12---------------------
+
+
+// let btn6 = document.createElement("button");
+// btn6.innerText = "click in btn6"
+// document.body.appendChild(btn6)
+
+// btn6.addEventListener("mouseover",()=>{
+//    document.body.style.backgroundColor = "yellow"
+// })
+
+
+//------------------------------------question 13-----------------------
+
+// async function hello(){
+//    let res = await fetch("https://jsonplaceholder.typicode.com/users");
+//    let data = await res.json();
+//    console.log(data)
+// }
+// hello()
+
+//-------------------------------question 14--------------------------
+
+
+
+async function helloo(){
+   let res = await fetch("https://jsonplaceholder.typicode.com/users");
+   let data = await res.json();
+
+   data.forEach((user)=>{
+      
+   console.log(user.username)
+   })
+}
+helloo()

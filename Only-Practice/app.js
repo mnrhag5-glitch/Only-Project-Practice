@@ -1602,7 +1602,33 @@ console.log("start the test");
 //------------------------------question 15------------------------------
 
 
+// let input = document.createElement("input");
 
+// let button = document.createElement("button");
+
+// button.innerText = "Get User";
+
+// document.body.appendChild(input);
+
+// document.body.appendChild(button);
+
+// button.addEventListener("click", async ()=>{
+
+//     let id = input.value;
+
+//     let res = await fetch(
+//         `https://jsonplaceholder.typicode.com/users/${id}`
+//     );
+
+//     let data = await res.json();
+
+//     let h1 = document.createElement("h1");
+
+//     h1.innerText = data.name;
+
+//     document.body.appendChild(h1);
+
+// });
 
 
 
@@ -1628,19 +1654,19 @@ console.log("start the test");
 //-------------------------------question 17--------------------------
 
 
-let object1 = {
-   car :"BMW",
-   speed : 150,
-   price : 500000
-}
+// let object1 = {
+//    car :"BMW",
+//    speed : 150,
+//    price : 500000
+// }
 
-let object2 = {
-   car : "TATA",
-   speed : 120,
-   price : 400000
-}
-console.log(object1)
-console.log(object2)
+// let object2 = {
+//    car : "TATA",
+//    speed : 120,
+//    price : 400000
+// }
+// console.log(object1)
+// console.log(object2)
 
 
 //-------------------------question 18-------------------------------
@@ -1691,3 +1717,64 @@ console.log(object2)
 
 
 // dogg.makeSound()
+
+
+
+
+//---------------question 22-------------------------------------
+
+class Animal{
+   constructor(name,sound){
+      this.name = name
+      this.sound = sound
+   }
+
+   method(){
+      console.log(this.name,"says",this.sound)
+   }
+}
+
+let ani = new Animal("dog","bakr")
+
+ani.method()
+
+
+//---------------question 28-----------------------------
+
+// let object = {
+//    name:gautam,
+//    age:22
+// }
+// console.log(this.name)
+
+//-----------question 32-------------------
+
+// a 
+// c
+// b
+
+//-------------------question 33-------------------------
+
+1
+3
+2
+
+
+//------------------------question 34--------------------------
+
+setTimeout(()=>{
+   console.log("Hello")
+},2000)
+
+
+//-------------------question 35----------------------------------
+
+let btn8 = document.createElement("button");
+btn8.innerText = "press";
+document.body.appendChild(btn8);
+
+btn8.addEventListener("click",()=>{
+   setTimeout(()=>{
+      console.log("Done")
+   },2000)
+})

@@ -1723,20 +1723,20 @@ console.log("start the test");
 
 //---------------question 22-------------------------------------
 
-class Animal{
-   constructor(name,sound){
-      this.name = name
-      this.sound = sound
-   }
+// class Animal{
+//    constructor(name,sound){
+//       this.name = name
+//       this.sound = sound
+//    }
 
-   method(){
-      console.log(this.name,"says",this.sound)
-   }
-}
+//    method(){
+//       console.log(this.name,"says",this.sound)
+//    }
+// }
 
-let ani = new Animal("dog","bakr")
+// let ani = new Animal("dog","bakr")
 
-ani.method()
+// ani.method()
 
 
 //---------------question 28-----------------------------
@@ -1744,9 +1744,11 @@ ani.method()
 // let object = {
 //    name:gautam,
 //    age:22
-// }
-// console.log(this.name)
 
+ //hello:function(){
+// console.log(this.name)
+// }}
+//  object.hello()
 //-----------question 32-------------------
 
 // a 
@@ -1762,19 +1764,33 @@ ani.method()
 
 //------------------------question 34--------------------------
 
-setTimeout(()=>{
-   console.log("Hello")
-},2000)
+// setTimeout(()=>{
+//    console.log("Hello")
+// },2000)
 
 
 //-------------------question 35----------------------------------
 
-let btn8 = document.createElement("button");
-btn8.innerText = "press";
-document.body.appendChild(btn8);
+// let btn8 = document.createElement("button");
+// btn8.innerText = "press";
+// document.body.appendChild(btn8);
 
-btn8.addEventListener("click",()=>{
+// btn8.addEventListener("click",()=>{
+//    setTimeout(()=>{
+//       console.log("Done")
+//    },2000)
+// })
+
+
+
+
+//--------------callback ka q hai bro---------------------------
+
+
+function fetchData(){
    setTimeout(()=>{
-      console.log("Done")
-   },2000)
-})
+      console.log("Data Loaded")
+   },3000)
+}
+
+fetchData()

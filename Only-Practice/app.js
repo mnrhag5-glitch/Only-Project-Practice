@@ -1787,10 +1787,10 @@ console.log("start the test");
 //--------------callback ka q hai bro---------------------------
 
 
-function fetchData(){
-   setTimeout(()=>{
-      console.log("Data Loaded")
-   },3000)
-}
+// function fetchData(){
+//    setTimeout(()=>{
+//       console.log("Data Loaded")
+//    },3000)
+// }
 
-fetchData()
+// fetchData()

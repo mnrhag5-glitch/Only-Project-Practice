@@ -1794,3 +1794,66 @@ console.log("start the test");
 // }
 
 // fetchData()
+
+
+
+
+
+// function step1(fn){{
+//    console.log("please wait for image")
+//    setTimeout(()=>{
+//       console.log("image selected suyccessfully")
+//       fn("selected image")
+//    },4000)
+
+// }}
+
+// function step2(image,fn){
+//    console.log("please wait filter to ${image}")
+//       setTimeout(()=>{
+//          console.log("filter applied")
+//          fn("filter applied")
+//       },2000)
+// }
+
+//   function step3(filter , fn){
+//    console.log("please wait addinfg caption to ${filter}")
+//    setTimeout(()=>{
+//       console.log("caption added")
+//       fn("caption image")
+//    },5000)
+//   }
+
+
+//   function step4(){
+//    console.log("filter uploading the %{caption}")
+//    setTimeout(()=>{
+//       console.log("image fimmally uploaded")
+//    },3000)
+
+
+//   }
+
+//  step1(function (image){
+//    step2(image, function(filter){
+// step3(filter)
+// {step4(captioned)}
+//    })
+//  })
+
+
+
+
+ let p1 = new Promise((resolve,reject)=>{
+   let data = "100 rupees"
+   let err = "this is error"
+   resolve(data)
+   reject(err)
+
+ })
+
+ p1
+ .then((data)=>{console.log(data)})
+ .catch((error)=>{
+   console.log(err)
+ }).finally(()=>{console.log("finally executed")})

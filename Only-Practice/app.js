@@ -1844,16 +1844,45 @@ console.log("start the test");
 
 
 
- let p1 = new Promise((resolve,reject)=>{
-   let data = "100 rupees"
-   let err = "this is error"
-   resolve(data)
-   reject(err)
+//  let p1 = new Promise((resolve,reject)=>{
+//    let data = "100 rupees"
+//    let err = "this is error"
+//    resolve(data)
+//    reject(err)
 
- })
+//  })
 
- p1
- .then((data)=>{console.log(data)})
- .catch((error)=>{
-   console.log(err)
- }).finally(()=>{console.log("finally executed")})
+//  p1
+//  .then((data)=>{console.log(data)})
+//  .catch((error)=>{
+//    console.log(err)
+//  }).finally(()=>{console.log("finally executed")})
+
+// function task(time, message){
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             console.log(message);
+//             resolve();
+//         }, time);
+//     });
+// }
+
+// task(4000, "select image")
+// .then(() => {
+//     return task(2000, "apply filter");
+// })
+// .then(() => {
+//     return task(5000, "add caption");
+// })
+// .then(() => {
+//     return task(3000, "upload image");
+// });
+
+
+
+let num = "25";
+let user = prompt("enter the number");
+while(user!==num){
+    user = prompt("try again")
+}
+console.log("very good")

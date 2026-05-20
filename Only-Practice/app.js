@@ -1880,9 +1880,121 @@ console.log("start the test");
 
 
 
-let num = "25";
-let user = prompt("enter the number");
-while(user!==num){
-    user = prompt("try again")
+// let num = "25";
+// let user = prompt("enter the number");
+// while(user!==num){
+//     user = prompt("try again")
+// }
+// console.log("very good")
+
+
+
+
+// let api = "https://jsonplaceholder.typicode.com/todos"
+
+// fetch(api)
+// .then((res)=>{return res.json()})
+// .then((data)=>{console.log(data)})
+
+
+// let api = "https://api.tvmaze.com/search/shows?q=girls"
+// fetch(api)
+
+// .then((res)=>{return res.json()})
+// .then((data)=>{console.log(data[1].show.averageRuntime)})
+
+
+
+
+// async function hello(){
+//    let res = await fetch("https://jsonplaceholder.typicode.com/todos")
+//   let data = await res.json()
+//   console.log(data)
+// }
+// hello()
+
+
+// let api = "https://jsonplaceholder.typicode.com/todos"
+
+// axios.get(api)
+// .then((res)=>{console.log(res.data)})
+// .catch((error)=>{console.log(error)})
+
+
+// 
+// const API="https://jsonplaceholder.typicode.com/todos"
+// axios.get(API)
+// async function todos() {
+//   const resp = await axios.get(API);
+//   console.log(resp.data);
+// }
+
+// todos()
+
+
+
+
+
+// let api = "https://jsonplaceholder.typicode.com/todos"
+// axios.get(api)
+
+// async function hello(){
+//    let res = await axios.get(api)
+//    console.log(res.data)
+// }
+
+// hello()
+
+
+
+
+
+// let api = "https://jsonplaceholder.typicode.com/users"
+ 
+// async function hello(){
+//    let res = await axios.get(api)
+//    console.log(res.data)
+
+//    for(let val of res.data){
+//       console.log(val.name)
+//    }
+// }
+
+// hello()
+ 
+
+
+
+
+// let api = "https:jsonplaceholder.typicode.com/todos"
+ 
+// async function hello(){
+//    let res = await axios.get(api)
+//    console.log(res.data)
+
+  
+// }
+
+// hello()
+ 
+
+let api = "https://jsonplaceholder.typicode.com/todos";
+
+async function hello(){
+
+    let res = await axios.get(api);
+
+    console.log("Total Todos:", res.data.length);
+
 }
-console.log("very good")
+
+hello();
+
+
+console.log("today i was busy so no commit")
+
+
+
+
+
+

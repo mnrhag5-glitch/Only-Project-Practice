@@ -1978,22 +1978,34 @@ console.log("start the test");
 // hello()
  
 
-let api = "https://jsonplaceholder.typicode.com/todos";
+// let api = "https://jsonplaceholder.typicode.com/todos";
 
-async function hello(){
+// async function hello(){
 
-    let res = await axios.get(api);
+//     let res = await axios.get(api);
 
-    console.log("Total Todos:", res.data.length);
+//     console.log("Total Todos:", res.data.length);
 
+// }
+
+// hello();
+
+
+// console.log("today i was busy so no commit")
+
+
+
+let arr = [2,5,11,9,3];
+
+let max = arr[0];
+
+for(let num of arr){
+   if(num > max){
+      max = num;
+   }
 }
 
-hello();
-
-
-console.log("today i was busy so no commit")
-
-
+console.log(max);
 
 
 

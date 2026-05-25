@@ -1995,18 +1995,24 @@ console.log("start the test");
 
 
 
-let arr = [2,5,11,9,3];
-
-let max = arr[0];
-
-for(let num of arr){
-   if(num > max){
-      max = num;
-   }
-}
-
-console.log(max);
 
 
+let arr = [
+  "13063.png",
+  "204770.jpg",
+  "miles-morales-spider-man-artwork-digital-art-marvel-4000x5655-584.jpg"
+];
 
+let index = 0;
 
+let img = document.querySelector(".images");
+
+img.src = arr[index];
+
+setInterval(() => {
+
+   index = (index + 1) % arr.length;
+
+   img.src = arr[index];
+
+},2000);

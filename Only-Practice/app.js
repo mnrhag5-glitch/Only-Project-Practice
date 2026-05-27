@@ -1997,22 +1997,31 @@ console.log("start the test");
 
 
 
-let arr = [
-  "13063.png",
-  "204770.jpg",
-  "miles-morales-spider-man-artwork-digital-art-marvel-4000x5655-584.jpg"
-];
+// let arr = [
+//   "13063.png",
+//   "204770.jpg",
+//   "miles-morales-spider-man-artwork-digital-art-marvel-4000x5655-584.jpg"
+// ];
 
-let index = 0;
+// let index = 0;
 
-let img = document.querySelector(".images");
+// let img = document.querySelector(".images");
 
-img.src = arr[index];
+// img.src = arr[index];
 
-setInterval(() => {
+// setInterval(() => {
 
-   index = (index + 1) % arr.length;
+//    index = (index + 1) % arr.length;
 
-   img.src = arr[index];
+//    img.src = arr[index];
 
-},2000);
+// },2000);
+
+
+let inp = document.querySelector('input')
+inp.addEventListener('keypress',(e)=>{
+   if(e.which === 13){
+      console.log(e.target.value);
+      
+   }
+})

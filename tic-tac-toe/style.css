@@ -1,0 +1,19 @@
+/* Body ko center me lane ke liye */
+body{
+    text-align:center;
+}
+
+/* Board ka layout */
+.board{
+    display:grid;
+    grid-template-columns:repeat(3,80px);
+    gap:5px;
+    justify-content:center;
+}
+
+/* Har box ki styling */
+.box{
+    width:80px;
+    height:80px;
+    font-size:30px;
+}

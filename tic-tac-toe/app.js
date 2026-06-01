@@ -102,3 +102,7 @@ restartBtn.addEventListener("click",()=>{
     // Message clear
     msg.innerText = "";
 });
+
+
+console.log('today rarget is not complete na to mene interview question solve kiye na hi t-t-t ko smjha aj ka din sirf project or ai interviw me hi gya');
+console.log('so sorry for that kal ka target-> t-t-t full complete or one interview session');

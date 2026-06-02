@@ -1,108 +1,230 @@
-// Saare boxes select kiye
-let boxes = document.querySelectorAll(".box");
+// // Saare boxes select kiye
+// let boxes = document.querySelectorAll(".box");
 
-// Message select kiya
-let msg = document.querySelector("#msg");
+// // Message select kiya
+// let msg = document.querySelector("#msg");
 
-// Restart button select kiya
-let restartBtn = document.querySelector("#restart");
+// // Restart button select kiya
+// let restartBtn = document.querySelector("#restart");
 
-// Pehla player X hoga
-let turn = "X";
+// // Pehla player X hoga
+// let turn = "X";
 
-// Total moves count
-let count = 0;
+// // Total moves count
+// let count = 0;
 
-// Winner mila ya nahi
-let winnerFound = false;
+// // Winner mila ya nahi
+// let winnerFound = false;
 
-// Winning patterns
-let winPatterns = [
-  [0,1,2],
-  [3,4,5],
-  [6,7,8],
-  [0,3,6],
-  [1,4,7],  // inhe 2D array kehte hai
-  [2,5,8],
-  [0,4,8],
-  [2,4,6]
-];
+// // Winning patterns
+// let winPatterns = [
+//   [0,1,2],
+//   [3,4,5],
+//   [6,7,8],
+//   [0,3,6],
+//   [1,4,7],  // inhe 2D array kehte hai
+//   [2,5,8],
+//   [0,4,8],
+//   [2,4,6]
+// ];
 
-// Har box par click event
-boxes.forEach((box)=>{
+// // Har box par click event
+// boxes.forEach((box)=>{
 
-    box.addEventListener("click",()=>{
+//     box.addEventListener("click",()=>{
 
-        // Box khali hona chahiye
-        if(box.innerText === "" && !winnerFound){
+//         // Box khali hona chahiye
+//         if(box.innerText === "" && !winnerFound){
 
-            // Current turn likho
-            box.innerText = turn;
+//             // Current turn likho
+//             box.innerText = turn;
 
-            // Move count badhao
-            count++;
+//             // Move count badhao
+//             count++;
 
-            // Winner check karo
-            checkWinner();
+//             // Winner check karo
+//             checkWinner();
 
-            // Agar winner nahi mila
-            if(!winnerFound){
+//             // Agar winner nahi mila
+//             if(!winnerFound){
 
-                // Turn change karo
-                turn = turn === "X" ? "O" : "X";
-            }
+//                 // Turn change karo
+//                 turn = turn === "X" ? "O" : "X";
+//             }
 
-            // Draw check
-            if(count === 9 && !winnerFound){
-                msg.innerText = "Game Draw!";
-            }
-        }
-    });
-});
+//             // Draw check
+//             if(count === 9 && !winnerFound){
+//                 msg.innerText = "Game Draw!";
+//             }
+//         }
+//     });
+// });
 
-// Winner check function
-function checkWinner(){
+// // Winner check function
+// function checkWinner(){
 
-    for(let pattern of winPatterns){
+//     for(let pattern of winPatterns){
+
+//         let a = boxes[pattern[0]].innerText;
+//         let b = boxes[pattern[1]].innerText;
+//         let c = boxes[pattern[2]].innerText;
+
+//         if(a !== "" && a === b && b === c){
+
+//             // Winner mil gaya
+//             winnerFound = true;
+
+//             // Message show
+//             msg.innerText = a + " Wins!";
+
+//             // Saare boxes disable
+//             boxes.forEach((box)=>{
+//                 box.disabled = true;
+//             });
+//         }
+//     }
+// }
+
+// // Restart button click
+// restartBtn.addEventListener("click",()=>{
+
+//     // Sab boxes clear
+//     boxes.forEach((box)=>{
+//         box.innerText = "";
+//         box.disabled = false;
+//     });
+
+//     // Variables reset
+//     turn = "X";
+//     count = 0;
+//     winnerFound = false;
+
+//     // Message clear
+//     msg.innerText = "";
+// });
+
+
+// console.log('today rarget is not complete na to mene interview question solve kiye na hi t-t-t ko smjha aj ka din sirf project or ai interviw me hi gya');
+// console.log('so sorry for that kal ka target-> t-t-t full complete or one interview session');
+
+
+
+
+
+
+
+//----------------------trying by my-self------------------------------------------------
+
+
+
+const boxes = document.querySelectorAll(".box")
+
+const msgBtn = document.querySelector("#msg")
+const restartBtn = document.querySelector("#restart")
+
+
+let turnO = true;
+
+let count = 0
+
+
+
+const winpatterns =[
+  
+      [0, 1, 2],
+  [0, 3, 6],
+  [0, 4, 8],
+  [1, 4, 7],
+  [2, 5, 8],
+  [2, 4, 6],
+  [3, 4, 5],
+  [6, 7, 8],
+   ]
+
+
+
+ boxes.forEach((box)=>{
+   box.addEventListener('click',()=>{
+    if(turnO){
+        box.innerText = "O"
+        turnO = false
+    }else{
+        box.innerText = 'X'
+      turnO = true
+        
+    }    
+    box.disabled = true
+    count++;
+let isWinner = checkWinner()
+if(count===9 && !isWinner){
+    gameDraw();
+}
+
+   })
+ })
+
+
+ function gameDraw(){
+    msgBtn.innerText = `Game is Draw`
+   disabledboxes()
+    
+
+}
+
+
+
+ function disabledboxes(){
+    for(let box of boxes){
+        box.disabled = true
+    }
+ }
+
+
+ function enableboxes(){
+    for(let box of boxes){
+        box.disabled = false;
+        box.innerText = "";
+    }
+ }
+
+
+function showWinner(winner){
+       msgBtn.innerText =  `Congratulationn 🎉 Winner is ${winner}`;
+       disabledboxes();
+}
+
+
+
+function checkWinner() {
+    for (let pattern of winpatterns) {
 
         let a = boxes[pattern[0]].innerText;
         let b = boxes[pattern[1]].innerText;
         let c = boxes[pattern[2]].innerText;
 
-        if(a !== "" && a === b && b === c){
+        if (a !== "" && b !== "" && c !== "") {
 
-            // Winner mil gaya
-            winnerFound = true;
+            if (a === b && b === c) {
+                showWinner(a);
+                return true;
+            }
 
-            // Message show
-            msg.innerText = a + " Wins!";
-
-            // Saare boxes disable
-            boxes.forEach((box)=>{
-                box.disabled = true;
-            });
         }
     }
+    return false;
 }
 
-// Restart button click
-restartBtn.addEventListener("click",()=>{
-
-    // Sab boxes clear
-    boxes.forEach((box)=>{
-        box.innerText = "";
-        box.disabled = false;
-    });
-
-    // Variables reset
-    turn = "X";
-    count = 0;
-    winnerFound = false;
-
-    // Message clear
-    msg.innerText = "";
-});
 
 
-console.log('today rarget is not complete na to mene interview question solve kiye na hi t-t-t ko smjha aj ka din sirf project or ai interviw me hi gya');
-console.log('so sorry for that kal ka target-> t-t-t full complete or one interview session');
+
+
+
+function restartGame(){
+    turnO = true;
+    count = 0
+       msgBtn.innerText = "";
+    enableboxes()
+}
+
+
+restartBtn.addEventListener("click", restartGame);

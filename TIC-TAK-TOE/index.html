@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+</head>
+<style>
+body{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(120, 129, 126);
+    
+}
+.container{
+
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(3,90px);
+    gap: 2px;
+    justify-content: center;
+  
+
+
+}
+h3{
+    margin-top: 80px;
+}
+.box{
+    height: 90px;
+    width: 90px;
+    cursor: pointer;
+    font-size: 45px;
+    background-color: white;
+   
+}
+.reset{
+    border-radius:5px;
+    cursor: pointer;
+    height: 30px;
+    width: 70px;
+    font-size: 17px;
+    margin-top: 15px;
+}
+
+</style>
+<body>
+
+    <h3>Tic-Tac-Toe</h3>
+
+    <div class="container">
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+        <button class="box"></button>
+    </div>
+
+    <div class="msg">
+        <p></p>
+    </div>
+    <button class="reset">restart</button>
+    
+
+
+    <script>
+
+
+
+   let boxes = document.querySelectorAll(".box")
+   let msg = document.querySelector(".msg")
+   let reset = document.querySelector(".reset")
+
+   let turnO = true;
+   let count = 0;
+
+
+  
+   for(let box of boxes){
+    box.addEventListener('click',()=>{
+          count++;
+        if(turnO){
+            box.innerText = 'O'
+            turnO = false;
+        }else{
+            box.innerText = 'X'
+            turnO = true;
+        }box.disabled = true;
+      
+    let cWinner =  checkWinner()
+if(count===9&&!cWinner){
+    draw();
+}
+
+    })
+   }
+
+
+   function draw(){
+    msg.innerText = "Draw 🙌"
+   }
+
+   let winPatterns = [
+
+          [0, 1, 2],
+  [0, 3, 6],
+  [0, 4, 8],
+  [1, 4, 7],
+  [2, 5, 8],
+  [2, 4, 6],
+  [3, 4, 5],
+  [6, 7, 8],
+   ]
+
+
+   function checkWinner(){
+    for(let pattern of winPatterns){
+        let a = boxes[pattern[0]].innerText
+        let b = boxes[pattern[1]].innerText
+        let c = boxes[pattern[2]].innerText
+
+        if(a!==''&&b!==""&&c!==''){
+            if(a===b&&b===c){
+                winner(a)
+              
+                // return true;
+            } 
+          
+                
+        }
+
+
+    }
+   }
+
+   function winner(a){
+    msg.innerText = `Congratulation Winner is ${a} 🎉`
+ disabled();
+
+   }
+
+
+   function disabled(){
+    for(let box of boxes)
+   {
+    box.disabled = true;
+   }
+   }
+
+
+   function restart(){
+    for(let box of boxes){
+        box.innerText = '';
+        turnO = 0 ;
+        enabled()
+    }
+   }
+
+   reset.addEventListener('click',()=>{
+    restart()
+   })
+
+
+   function enabled(){
+    for(let box of boxes){
+        box.disabled = false;
+        msg.innerText = '';
+    }
+   }
+
+   console.log("Coding is Completed😭");
+   
+
+    </script>
+</body>
+</html>

@@ -2018,10 +2018,216 @@ console.log("start the test");
 // },2000);
 
 
-let inp = document.querySelector('input')
-inp.addEventListener('keypress',(e)=>{
-   if(e.which === 13){
-      console.log(e.target.value);
+// let inp = document.querySelector('input')
+// inp.addEventListener('keypress',(e)=>{
+//    if(e.which === 13){
+//       console.log(e.target.value);
       
-   }
-})
+//    }
+// })
+
+
+// let marks = {
+//     math: 90,
+//     english: 80,
+//     science: 85
+// };
+
+// let max = Math.max(...Object.values(marks));
+
+// console.log(max); // 90
+
+
+
+
+
+
+
+
+
+
+//    let arr = [1,2,3,4,5,6]
+//    let even = arr.filter((a)=>{
+//       return a%2==0
+//    })
+// console.log(even);
+
+
+// let arr =[1,2,3,4,5]
+// let dbl = arr.map((a)=>{
+//    return a*2
+// }).filter((a)=>{
+//    return a>5
+// })
+
+// console.log(dbl);
+
+
+
+
+
+//----------------------------------prit Even numbers----------------------------
+
+// let arr = [1,2,3,4,5];
+// let even = arr.filter((s)=>{
+//    return s%2==0
+// })
+// console.log(even);
+
+//----------------------------------------------------------------------------------
+
+//----------------------------------duoble number-------------------------------------
+
+
+
+// let arr = [1,2,3,4,5];
+// let dbl = arr.map((s)=>{
+//    return s*2
+// })
+// console.log(dbl);
+
+//-------------------------------------------------------------------------------------
+
+//---------------------------------------sum of array-----------------------------
+
+// let arr = [1,2,3,4,5];
+// let sum = arr.reduce((a,b)=>{
+//    return a+b
+// })
+// console.log(sum);
+
+
+//-----------------------------------------------------------------------------
+
+//----------------------------------------toUpperCase-----------------------------
+
+// let names = ["ram","shyam","mohan"];
+// let uppercase = names.map((a)=>{
+//    return a.toUpperCase()
+// })
+// console.log(uppercase);
+
+//---------------------------------------------------------------------------------
+
+//---------------------------------largest number----------------------------------
+
+
+// let nums = [12,5,8,20,1];
+// let max = Math.max(...nums)
+
+// console.log(max);
+
+
+//-----------------------------------------------------------------------------
+
+//-------------------------------------smallest number----------------------------------
+
+
+// let nums = [12,5,8,20,1];
+// let min = Math.min(...nums)
+
+// console.log(min);
+
+
+//-------------------------------------------------------------------------------
+
+//---------------------------------------reverse string-----------------------------
+
+// let str = "javascript";
+
+// let rev = str.split("").reverse().join("");
+
+// console.log(rev);
+
+
+
+//-----------------------------------------------------------------------------------
+
+//----------------------------------count fruit times------------------------------------
+
+// let fruits = ["apple","banana","apple","orange","banana","apple"];
+// let count = {};
+
+// for(let fruit of fruits){
+//     count[fruit] = (count[fruit] || 0) + 1;
+// }
+
+// console.log(count);
+//-----------------------------------------------------------------------------------
+
+//----------------------------------------even number ka sum-----------------------------
+
+// let arr = [1,2,3,4,5];
+// let even = arr.filter((a)=>{
+//    return a%2==0
+// }).reduce((a,b)=>{
+//    return a+b
+// })
+// console.log(even);
+
+
+//--------------------------------------------------------------------
+
+//--------------------------------18 + users count kro----------------------------------
+
+
+// let users = [
+//   {name:"Aman", age:21},
+//   {name:"Rohit", age:18},
+//   {name:"Ram", age:17}
+// ];
+
+// let youger = users.filter((a)=>{
+
+// return a.age>18
+// }).length
+// console.log(youger);
+
+//-------------------------------------------------------------------------------
+
+//---------------------------------age ka total sum nikalo-------------------------
+
+// let users = [
+//   {name:"Aman", age:21},
+//   {name:"Rohit", age:18},
+//   {name:"Ram", age:17}
+// ];
+// let sum = users.filter((a)=>{
+//    return a.age>=18
+// }).reduce((a,b)=>{
+//    return a+b.age
+
+// },0)
+// console.log(sum);
+
+
+
+//-----------------------------------------------------------------------
+
+//-------------------------------squre nikale sbhi ka--------------------------
+
+// let nums = [1,2,3,4,5];
+// let qube = nums.map((a)=>{
+//    return a*a
+// })
+// console.log(qube);
+
+
+//-------------------------------------------------------------------------
+
+//-------------------------------------
+
+
+
+
+// console.log([] == false);
+// console.log(typeof null);
+
+// let a = 11, b = 22;
+
+// let c = a + b + a++ + b++ + ++a + ++b;
+
+// console.log(a);
+// console.log(b);
+// console.log(c);  
+

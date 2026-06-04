@@ -346,102 +346,108 @@
 
 
 
-let boxes = document.querySelectorAll(".box")
-let restart = document.querySelector("#restart")
-let msg = document.querySelector("#msg")
+// let boxes = document.querySelectorAll(".box")
+// let restart = document.querySelector("#restart")
+// let msg = document.querySelector("#msg")
 
 
-let turnX = true;
-let count = 0
-
-
-
-
-function draw(){
-    msg.innerText = "Draw 🙌🙌"
-}
+// let turnX = true;
+// let count = 0
 
 
 
-for(let box of boxes){
-    box.addEventListener('click',()=>{
-        if(turnX){
-            box.innerText = 'X'
-            turnX = false
-        }else{
-            box.innerText = 'O'
-            turnX = true;
-        }
-        box.disabled = true;
-        count++;
-        let isWinner = checkWinner();
-        if(count===9&&!isWinner){
-            draw();
-        }
-    })
-}
+
+// function draw(){
+//     msg.innerText = "Draw 🙌🙌"
+// }
 
 
-let winPatterns = [
 
-       [0, 1, 2],
-  [0, 3, 6],
-  [0, 4, 8],
-  [1, 4, 7],
-  [2, 5, 8],
-  [2, 4, 6],
-  [3, 4, 5],
-  [6, 7, 8],
-
-]
-
-function checkWinner(){
-    for(let pattern of winPatterns){
-     let a = boxes[pattern[0]].innerText
-     let b = boxes[pattern[1]].innerText
-     let c = boxes[pattern[2]].innerText
-
-  if(a!==''&& b!==''&&c!==''){
-    if(a===b&&b===c){
-        winner(a);
-        return true;
-    }
-  }
-
-    }
-}
+// for(let box of boxes){
+//     box.addEventListener('click',()=>{
+//         if(turnX){
+//             box.innerText = 'X'
+//             turnX = false
+//         }else{
+//             box.innerText = 'O'
+//             turnX = true;
+//         }
+//         box.disabled = true;
+//         count++;
+//         let isWinner = checkWinner();
+//         if(count===9&&!isWinner){
+//             draw();
+//         }
+//     })
+// }
 
 
-function winner(a){
-    msg.innerText = `Congratulations winner is ${a} 🎉🎉`
-    disabled();
+// let winPatterns = [
 
-}
+//        [0, 1, 2],
+//   [0, 3, 6],
+//   [0, 4, 8],
+//   [1, 4, 7],
+//   [2, 5, 8],
+//   [2, 4, 6],
+//   [3, 4, 5],
+//   [6, 7, 8],
 
-function disabled(){
-    for(let box of boxes){
-        box.disabled = true;
-        // box.innerText = '';
-    }
-}
+// ]
 
-function reset(){
-    for(let box of boxes){
-        box.innerText = '';
-        turnX = true
-        msg.innerText = '';
-        count = 0
+// function checkWinner(){
+//     for(let pattern of winPatterns){
+//      let a = boxes[pattern[0]].innerText
+//      let b = boxes[pattern[1]].innerText
+//      let c = boxes[pattern[2]].innerText
+
+//   if(a!==''&& b!==''&&c!==''){
+//     if(a===b&&b===c){
+//         winner(a);
+//         return true;
+//     }
+//   }
+
+//     }
+// }
+
+
+// function winner(a){
+//     msg.innerText = `Congratulations winner is ${a} 🎉🎉`
+//     disabled();
+
+// }
+
+// function disabled(){
+//     for(let box of boxes){
+//         box.disabled = true;
+//         // box.innerText = '';
+//     }
+// }
+
+// function reset(){
+//     for(let box of boxes){
+//         box.innerText = '';
+//         turnX = true
+//         msg.innerText = '';
+//         count = 0
        
-    } enabled();
-}
+//     } enabled();
+// }
 
-function enabled(){
-    for(let box of boxes){
-        box.disabled = false;
-
-
-    }
-}
+// function enabled(){
+//     for(let box of boxes){
+//         box.disabled = false;
 
 
-restart.addEventListener('click', reset)
+//     }
+// }
+
+
+// restart.addEventListener('click', reset)
+
+
+
+
+//----------------------again try ----------------------------------------------
+

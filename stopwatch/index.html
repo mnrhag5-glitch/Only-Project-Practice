@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        text-align: center;
+        background-color: rgb(165, 165, 162);
+    }
+    *{
+        margin-top: 30px;
+    }
+    button{
+        height: 40px;
+        width: 70px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <h1>Stop-Watch</h1>
+    <h1 class="time">00:00:00</h1>
+    <button class="start">Start</button>
+    <button class="stop">Stop</button>
+    <button class="reset">Reset</button>
+</body>
+
+
+<script>
+ 
+ let time = document.querySelector(".time")
+ let startBtn = document.querySelector(".start")
+ let stopBtn = document.querySelector(".stop")
+ let resetBtn = document.querySelector(".reset")
+
+ let hour = 0;
+ let minute = 0;
+ let second = 0;
+ let intervel;
+
+ function update(){
+    let h = hour<10 ? "0"+hour : hour
+    let m = minute<10 ? "0"+minute : minute
+    let s = second<10 ? "0"+second : second
+    time.innerText = h+":"+m +":" +s
+ }
+
+
+ startBtn.addEventListener("click",()=>{
+     
+     clearInterval(intervel)
+      intervel=setInterval(()=>{
+        second++;
+        console.log("updating");
+
+         
+    if(second===60){
+        second=0;
+        minute++
+    }if(
+        minute===60
+    ){
+        minute=0;
+        hour++
+    }
+
+    update();
+    },1000)
+})
+
+stopBtn.addEventListener("click",()=>{
+    clearInterval(intervel)
+})
+
+resetBtn.addEventListener("click",()=>{
+    clearInterval(intervel)
+    hour = 0;
+    minute = 0;
+    second = 0;
+    update()
+})
+
+</script>
+</html>

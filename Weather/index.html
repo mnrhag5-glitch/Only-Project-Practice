@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(
+    135deg,
+    #0f172a,
+    #1e293b,
+    #334155
+    );
+}
+
+.container{
+
+    width:420px;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    backdrop-filter:blur(20px);
+
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,0.35);
+
+    color:white;
+}
+
+.container h1{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+    font-size:32px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+}
+
+.search-box{
+
+    display:flex;
+
+    gap:10px;
+}
+
+.cityInput{
+
+    flex:1;
+
+    height:55px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:15px;
+
+    padding:0 15px;
+
+    font-size:16px;
+
+    background:rgba(255,255,255,0.12);
+
+    color:white;
+}
+
+.cityInput::placeholder{
+
+    color:#d1d5db;
+}
+
+.searchBtn{
+
+    width:110px;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    background:
+    linear-gradient(
+    135deg,
+    #38bdf8,
+    #2563eb
+    );
+
+    color:white;
+
+    transition:.3s;
+}
+
+.searchBtn:hover{
+
+    transform:translateY(-3px);
+}
+
+.weatherResult{
+
+    margin-top:25px;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    background:
+    rgba(255,255,255,0.08);
+
+    border:
+    1px solid rgba(255,255,255,0.15);
+
+    text-align:center;
+
+    min-height:150px;
+}
+
+.weatherResult h2{
+
+    font-size:32px;
+
+    margin-bottom:15px;
+}
+
+.weatherResult p{
+
+    margin:12px 0;
+
+    font-size:18px;
+
+    color:#e5e7eb;
+}
+
+
+</style>
+<body>
+
+<div class="container">
+
+    <h1>🌤 Weather App</h1>
+
+    <div class="search-box">
+        <input type="text" class="cityInput" placeholder="Enter city name">
+        <button class="searchBtn">Search</button>
+    </div>
+
+    <div class="weatherResult"></div>
+
+
+<script>
+
+
+const cityInput = document.querySelector(".cityInput");
+const searchBtn = document.querySelector(".searchBtn");
+const weatherResult = document.querySelector(".weatherResult");
+const API_KEY = "5938fe4c5a0472de7053348a9e431903";
+searchBtn.addEventListener("click", () => {
+    const city = cityInput.value;
+    if(city === ""){
+        weatherResult.innerHTML = "Please enter city";
+        return; }
+    getWeather(city);});
+async function getWeather(city){
+    try{
+        const url =
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
+        // API request bhej raha hai
+        const response = await fetch(url);
+        // JSON me convert kar raha hai
+        const data = await response.json();
+        console.log(data);
+        // Agar city galat hai ya koi aur error hai
+        if(data.cod != 200){
+            weatherResult.innerHTML = data.message;
+            return;}
+        // Temperature
+        const temp = data.main.temp;
+        // Weather condition
+        const condition = data.weather[0].main;
+        // Humidity
+        const humidity = data.main.humidity;
+        // Wind speed
+        const wind = data.wind.speed;
+        // Result screen par show karna
+        weatherResult.innerHTML = `
+            <h2>${data.name}</h2>
+            <p>🌡️ Temperature: ${temp} °C</p>
+            <p>☁️ Condition: ${condition}</p>
+            <p>💧 Humidity: ${humidity}%</p>
+            <p>🌬️ Wind Speed: ${wind} m/s</p> `;}
+    catch(error){
+        weatherResult.innerHTML = "Something went wrong";
+        console.log(error);}}
+        </script>
+
+</body>
+</html>

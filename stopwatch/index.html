@@ -41,33 +41,61 @@
  let second = 0;
  let intervel;
 
- function update(){
-    let h = hour<10 ? "0"+hour : hour
-    let m = minute<10 ? "0"+minute : minute
-    let s = second<10 ? "0"+second : second
-    time.innerText = h+":"+m +":" +s
- }
 
 
- startBtn.addEventListener("click",()=>{
-     
-     clearInterval(intervel)
-      intervel=setInterval(()=>{
+//  function update(){
+//     let h = hour<10 ? "0"+hour : hour
+//     let m = minute<10 ? "0"+minute : minute
+//     let s = second<10 ? "0"+second : second
+//     time.innerText = h+":"+m +":" +s
+//  }
+//  startBtn.addEventListener("click",()=>{
+//      clearInterval(intervel)
+//       intervel=setInterval(()=>{
+//         second++;
+//         console.log("updating");
+//     if(second===60){
+//         second=0;
+//         minute++
+//     }if(
+//         minute===60
+//     ){
+//         minute=0;
+//         hour++}
+//     update();
+//     },1000)
+// })
+// stopBtn.addEventListener("click",()=>{
+//     clearInterval(intervel)})
+// resetBtn.addEventListener("click",()=>{
+//     clearInterval(intervel)
+//     hour = 0;
+//     minute = 0;
+//     second = 0;
+//     update()
+// })
+//----------------------try again--------------------------------
+
+function update(){
+let h = hour<10 ? "0"+hour : hour
+let m = minute<10 ? "0"+minute : minute
+let s = second<10 ? "0"+second : second
+time.innerText = h+":"+m+":"+s
+}
+
+startBtn.addEventListener("click",()=>{
+    clearInterval(intervel);
+    
+    intervel = setInterval(()=>{
         second++;
-        console.log("updating");
-
-         
-    if(second===60){
-        second=0;
-        minute++
-    }if(
-        minute===60
-    ){
-        minute=0;
-        hour++
-    }
-
-    update();
+        console.log("All Done");
+        if(second===60){
+            second=0;
+            minute++
+        }if(minute===60){
+            minute=0;
+            hour++;
+        }update();
     },1000)
 })
 
@@ -77,11 +105,12 @@ stopBtn.addEventListener("click",()=>{
 
 resetBtn.addEventListener("click",()=>{
     clearInterval(intervel)
-    hour = 0;
-    minute = 0;
-    second = 0;
-    update()
+    hour=0;
+    minute=0;
+    second=0;
+    update();
 })
+
 
 </script>
 </html>

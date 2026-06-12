@@ -220,73 +220,53 @@
 
 
 
+//---------try again------------------------------------------------------
 
 
-            ////////----------------------try again------------------------------------------
-            let input = document.querySelector(".cityInput");
-            let searchBtn = document.querySelector(".searchBtn");
-            let msg = document.querySelector(".weatherResult");
+// let input = document.querySelector(".cityInput")
+// let btn = document.querySelector(".searchBtn")
+// let msg = document.querySelector(".weatherResult")
+// btn.addEventListener("click",()=>{
+//     let city = input.value
+//     if(city==""){
+//         msg.innerHTML = "First Enter City"
+//        return;}
+//       getData(city);})
+// const API_KEY = "5938fe4c5a0472de7053348a9e431903"
+// async function getData(city) {
+//     try{
+// const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
+//         let res = await fetch(url)
+//         let data = await res.json();
+//         console.log(data);
+        
 
-            const API_KEY = "5938fe4c5a0472de7053348a9e431903";
+//         if(data.cod!==200){
+//             msg.innerHTML = data.message;
+//             return;
+//         }
+// let temp = data.main.temp;
+// let condition = data.weather[0].main
+// let humidity = data.main.humidity;
+// let wind = data.wind.speed;
+// msg.innerHTML=`
+// <h2>${data.name}</h2>
+// <p>Temprature : ${temp}</p>
+// <p>Condition : ${condition}</p>
+// <p>Humidity : ${humidity}</p>
+// <p>Wind : ${wind}</p>`  
+// }
+// catch(error){msg.innerHTML="Something Wrong"}}
+       
+       
 
-            searchBtn.addEventListener("click", () => {
-
-                let city = input.value;
-
-                if (city === "") {
-                    msg.innerHTML = "Enter the city";
-                    return;
-                }
-
-                getData(city);
-            });
-
-            async function getData(city) {
-
-                try {
-
-                    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
-
-                    let res = await fetch(url);
-
-                    let data = await res.json();
-
-                    console.log(data);
-
-                    if (data.cod !== 200) {
-                        msg.innerHTML = data.message;
-                        return;
-                    }
-                    let temp = data.main.temp;
-                    let condition = data.weather[0].main;
-                    let humidity = data.main.humidity;
-                    let wind = data.wind.speed;
-                    msg.innerHTML = `
- <h2>${data.name}</h2>
- <p>🌡️temprature : ${temp} °C </p>
- <p>☁️Condition : ${condition}</p>
- <p>💧Humidity : ${humidity}%</p>
- <p>🌬️Wind : ${wind} m/s</p>`
-                }
-                catch (error) {
-                    console.log(error);
-                    msg.innerHTML = "Something went wrong";
-                }
-            }
+///---------------------------try again----------------------------------------------
 
 
 
 
-
-
-
-
-
-
-
-
-
-        </script>
+       
+       </script>
 
 </body>
 

@@ -114,7 +114,7 @@
         transform: translateY(-3px);
     }
 
-    .result {
+    .msg {
 
         margin-top: 25px;
 
@@ -133,14 +133,14 @@
         min-height: 150px;
     }
 
-    .result h2 {
+    .msg h2 {
 
         font-size: 32px;
 
         margin-bottom: 15px;
     }
 
-    .result p {
+    .msg p {
 
         margin: 12px 0;
 

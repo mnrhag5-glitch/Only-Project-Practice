@@ -2231,3 +2231,70 @@ console.log("start the test");
 // console.log(b);
 // console.log(c);  
 
+
+// function hello(n){
+//    if(n>0){
+//       hello(n-1)
+//       console.log(n);
+      
+//    }
+// }hello(10)
+
+
+//--------------------factorial---------------------------------------------
+
+// function hello(n){
+//    if(n==1){
+//       return 1;
+//    }return n*hello(n-1)
+// }
+// let res = hello(5)
+// console.log(res);
+
+
+
+
+//-----------------------sum recursion-------------------------------
+
+// function hello(n){
+//    if(n==1){
+//       return;
+//    } return n+(n-1)
+// }
+// const res = hello(5)
+// console.log(res);
+
+
+// console.log("seju" - 100);
+
+
+// let arr = [1,2,3,4,5];
+//   arr.splice(5,0,6);
+// console.log(arr);
+
+
+// console.log(typeof(!NaN));
+
+
+// console.log({}+[]);
+
+
+ ///let arr =[15,10,30,40,5,10,30]
+
+
+//  arr.sort((a,b)=>{
+//    return b-a
+//  })
+// let newone = new Set(arr)
+// console.log(newone);
+
+
+// console.log(NaN===NaN);
+// console.log(NaN==NaN);
+
+
+var a =10;
+console.log(++a);
+console.log(a++);
+console.log(a);
+

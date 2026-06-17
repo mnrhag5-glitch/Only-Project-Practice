@@ -2292,9 +2292,92 @@ console.log("start the test");
 // console.log(NaN===NaN);
 // console.log(NaN==NaN);
 
+// let a = 28;
+// let b = 20;
+// let res = a>b ? true : false;
 
-var a =10;
-console.log(++a);
-console.log(a++);
-console.log(a);
+// console.log(res);
 
+
+
+// let arr = [12,23,23,34,10,19,10]
+// let set = [...new Set(arr)]
+// console.log(set);
+
+
+
+// let arr = [12,23,23,34,10,19,10]
+// let set =[...new Set(arr)]
+// set.unshift(99);
+// console.log(set);
+
+
+
+// let arr = [12,23,23,34,10,19,10]
+// arr.splice(1,1,13,14)
+// console.log(arr);
+
+
+
+// let ans = confirm("Are you 18+ ?");
+
+// if(ans){
+//     console.log("Welcome");
+// }else{
+//     console.log("Access Denied");
+// }
+
+// let a ;
+// console.log(a);
+
+// console.log("10"+100+20);  //1010020
+// console.log(10+100+"20");  //11020
+
+
+
+// console.log("10"+"5");   ///  5
+// console.log(4-"10");   //-6
+// console.log(4*"10");   //40
+// console.log(50+20+"10");   //7010
+// console.log("50"+20+"10");   //502010
+
+
+
+// let arr = [300,8,400,9,500]
+// arr.sort((a,b)=>a-b)
+// console.log(arr);
+
+// console.log(typeof(NaN));
+
+
+// console.log(a);
+// let a = 10
+// // var a = 10
+
+
+
+// console.log(a); //undiclare
+// let b;
+// console.log(b);  //undifine
+
+
+
+// let arr = ["ram","sita", "laxman"]
+// let res = arr.map((a)=>{
+//    return a.toUpperCase()
+// })
+// console.log(res);
+
+
+// function createHelloWorld(){
+//     console.log("Hello World")
+// }
+// createHelloWorld();
+
+function counter(){
+   let i=10
+    for(let i=10; i<=13;i++);
+    }
+counter()
+counter()
+counter()

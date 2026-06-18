@@ -2374,10 +2374,52 @@ console.log("start the test");
 // }
 // createHelloWorld();
 
-function counter(){
-   let i=10
-    for(let i=10; i<=13;i++);
-    }
-counter()
-counter()
-counter()
+
+// function hello(message,time){
+//     return new Promise((res,rej)=>{
+//         setTimeout(()=>{
+//             res(message)
+//         },time)
+//     })
+// }
+// hello("message",2000)
+// .then((data)=>{
+//     console.log(data)
+//     return hello("Login",3000)})
+// .then((data)=>{
+//     console.log(data)
+//     return hello("Fetch Profile",4000)})
+// .then((data)=>{
+//     console.log(data)
+//     return hello("Shoe dashboard",5000)})
+
+// .then((data) => {
+//     console.log(data);
+// });
+
+
+
+
+
+function hello(message,time){
+   return new Promise((resolve, reject) => {
+       setTimeout(()=>{
+         resolve(message)
+       },time)
+   })
+}
+
+hello("message",2000)
+.then((data)=>{console.log(data);
+   return hello("how are you",3000)
+})
+.then((data)=>{console.log(data);
+   return hello("i am good",2000)
+}).then((data)=>{console.log(data);
+   return hello("what about you",4000)
+})
+.then((data)=>{
+   console.log(data);
+   
+})
+

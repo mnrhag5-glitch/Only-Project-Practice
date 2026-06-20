@@ -2401,25 +2401,56 @@ console.log("start the test");
 
 
 
-function hello(message,time){
-   return new Promise((resolve, reject) => {
-       setTimeout(()=>{
-         resolve(message)
-       },time)
-   })
-}
+// function hello(message,time){
+//    return new Promise((resolve, reject) => {
+//        setTimeout(()=>{
+//          resolve(message)
+//        },time)
+//    })
+// }
 
-hello("message",2000)
-.then((data)=>{console.log(data);
-   return hello("how are you",3000)
-})
-.then((data)=>{console.log(data);
-   return hello("i am good",2000)
-}).then((data)=>{console.log(data);
-   return hello("what about you",4000)
-})
-.then((data)=>{
-   console.log(data);
+// hello("message",2000)
+// .then((data)=>{console.log(data);
+//    return hello("how are you",3000)
+// })
+// .then((data)=>{console.log(data);
+//    return hello("i am good",2000)
+// }).then((data)=>{console.log(data);
+//    return hello("what about you",4000)
+// })
+// .then((data)=>{
+//    console.log(data);
    
-})
+// })
 
+
+
+// for(let i = 1; i<=500;i++){
+//    console.log("Hello World");
+   
+// }
+
+
+// try{
+//    console.log("all good");
+   
+// }catch(error){
+//    console.log("sommthing is wrong");
+   
+// }
+
+// let set = new Set()
+// set.add(10)
+// set.add(11)
+// set.add(12)
+// console.log(set.size);
+// console.log(set.has(34));
+// console.log(set.has(12));
+// set.delete(10)
+// console.log(set.size);
+// set.clear()
+// console.log(set.size);
+
+// let arr = [1,2,3,4]
+// let max = Math.max(...arr)
+// console.log(max);

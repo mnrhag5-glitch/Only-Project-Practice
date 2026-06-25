@@ -2454,3 +2454,44 @@ console.log("start the test");
 // let arr = [1,2,3,4]
 // let max = Math.max(...arr)
 // console.log(max);
+
+// let a = 10;
+// let b = 20;
+// let sum = a + c;
+
+// console.log(sum);
+
+// let arr = [1,2,3,4,5,3,4,5]
+// let removee = [...new Set(arr)];
+// console.log(removee);
+
+
+// let a = "hello" , b = 12 , c = true;
+// console.log(a,b,c);
+
+// let sum = 0
+// for(let i = 1; i<15;i++){
+//      sum = sum+i
+// }
+// console.log(sum);
+
+
+// var arr = [1,2,3,4,5]
+// let rev = []
+// for(let i = arr.length-1;i>0;i--){
+// rev.push(arr[i])
+// }
+// arr = rev
+
+// console.log(rev);
+// console.log(arr);
+
+
+let arr = [2,4,5,7,3,5,9,4,8]
+let real = [...new Set(arr)]
+
+
+let arrange = real.sort((a,b)=>{
+   return a-b
+})
+console.log(arrange);

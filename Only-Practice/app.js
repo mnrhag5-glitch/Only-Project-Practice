@@ -2487,11 +2487,78 @@ console.log("start the test");
 // console.log(arr);
 
 
-let arr = [2,4,5,7,3,5,9,4,8]
-let real = [...new Set(arr)]
+// let arr = [2,4,5,7,3,5,9,4,8]
+// let real = [...new Set(arr)]
 
 
-let arrange = real.sort((a,b)=>{
-   return a-b
-})
-console.log(arrange);
+// let arrange = real.sort((a,b)=>{
+//    return a-b
+// })
+// console.log(arrange);
+
+
+// function sum(arr){
+//    let summ = 0;
+//    sum.forEach((a)=>{
+//       summ = summ+a;
+//    })
+//    return sum
+// }
+// console.log();
+
+
+// async function getData() {
+//     const response = await fetch("https://jsonplaceholder.typicode.com/users");
+//     const users = await response.json();
+
+//     let output = "";
+
+//     users.forEach(user => {
+//         output += `<p>${user.name}</p>`;
+//     });
+
+//     document.getElementById("data").innerHTML = output;
+// }
+
+// getData();
+
+
+
+// let obj = {
+//    name:"ram",
+//    address = {city:"delhi"}
+// }
+// let shallowCopy = obj.address.city
+
+
+// let arr = [1,2,3]
+// function sum(a,b,c){
+//   return a+b+c
+// } 
+// // let a = sum(...arr)
+// // console.log(a);
+// console.log(sum(1,2,3));
+
+// let a = [1,2,3,4,5,6]
+// let b = a.map((val)=>{
+//    return val 
+// })
+// console.log(b);
+
+
+// let arr = [1,2,3,4,5]
+// let res = arr.reduce((a,b)=>{
+//    return a+b
+// },1)
+// console.log(res);
+
+// console.log(1==="1");
+
+
+try{
+   console.log("all good");
+   
+}catch(error){
+console.log("something wromg");
+
+}

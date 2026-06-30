@@ -2555,10 +2555,191 @@ console.log("start the test");
 // console.log(1==="1");
 
 
-try{
-   console.log("all good");
+// try{
+//    console.log("all good");
    
-}catch(error){
-console.log("something wromg");
+// }catch(error){
+// console.log("something wromg");
 
-}
+// }
+
+
+
+
+
+//----------------------------------- Prectice for viva ----------------------------------------------
+//----------------------------------- Prectice for viva ----------------------------------------------
+//----------------------------------- Prectice for viva ----------------------------------------------
+//----------------------------------- Prectice for viva ----------------------------------------------
+//----------------------------------- Prectice for viva ----------------------------------------------
+//----------------------------------- Prectice for viva ----------------------------------------------
+
+
+
+
+
+//----------->>>>>>>>>  swaping
+
+
+
+
+// let a = 10;
+// let b = 20;
+
+// function swap(){
+// [a,b] = [b,a]
+// return [a,b]}
+
+// console.log(swap(a,b));
+
+
+
+
+//------------>>>>>.  largest and smallest 
+
+
+
+//  let num = [12,2,5,54,23,43,4,64,65,44,65]
+
+//  let largest = Math.max(...num)
+//  let smallest = Math.min(...num)
+// console.log(smallest);
+// console.log(largest);
+
+
+//---------------->>>>>>  second big element >>   
+
+
+//  let num = [12,2,5,54,23,43,4,64,65,44,65,64]
+// let remove = [...new Set(num)]
+// console.log(remove);
+
+//  let secondBig = remove.sort((a,b)=>{
+//    return b-a;
+//  })
+
+//  console.log(secondBig[0]);
+//  console.log(secondBig[1]);
+//  console.log(secondBig[2]);
+ 
+
+
+
+//---------------- reverse array =>>>>>>>>>>>>>.
+
+//  let arr = [12,3,4,5,6,7];
+
+//  let rev = []
+// for(let i=arr.length-1 ;i>=0; i--){
+//    rev.push(arr[i])
+// }
+
+// console.log(rev);
+
+
+
+
+//----------------------------   Move 0 one side and 1 one side>>>>>>>>.
+
+
+//   let arr = [0,1,1,0,1,0,0,1,1,0];
+
+
+//   let side = arr.sort((a,b)=>{
+//    return a-b;
+//   })
+// console.log(side);
+
+
+
+// let arr = ["apple" , "litchi","mango", "grapes"]
+// let alpha = arr.sort()
+// console.log(alpha);
+
+
+
+
+//--------------------->>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+// let arr = [1,2,3,4,5];  //5,1,2,3,4
+
+// arr.unshift(arr.pop())
+// console.log(arr);
+
+
+// let arr2 = [1,2,3,4,5]    // 2,3,4,5,1
+
+// arr2.push(arr2.shift())
+// console.log(arr2);
+
+
+
+//----------------------------------  spread ---
+
+// let arr = [1,2,3,4,5]
+
+// console.log(...arr);
+
+
+//------------------------------ rest>>>
+
+// function sum(...add){
+//    console.log(add);
+
+// }
+
+// sum(1,2,3,4)
+
+
+//---------------------- counter 1 bdhao>>>>
+
+// function add(){
+//    let count = 10;
+//    function sum(){
+//       count++;
+//       console.log(count);
+      
+//    }return sum
+// }
+// let hy = add()
+// hy()
+// hy()
+// hy()
+
+
+
+
+//-------------------------- obj distructring ->>>>>>>>>>>>>
+
+// let obj = {
+//    name : "ram",
+//    age : 22,
+// }
+
+// let {name,age} = obj;
+
+// console.log(name);
+// console.log(age);
+
+
+
+
+//------------------- remove duplicate with filter >>>>>>>>>>>>
+
+
+// let arr = [1, 2, 2, 3, 4, 4];
+
+// let remove = arr.filter((a,b)=>{
+//   return arr.indexOf(a) === b
+// })
+// console.log(remove);
+
+
+//------------------------ reverse string ->>>>
+
+// function reverse(str){
+//    if(str.length===0) return "";
+//    return reverse(str.slice(1)) + str[0]
+// }
+// console.log(reverse("gautam"));
